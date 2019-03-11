@@ -1,4 +1,4 @@
-package com.bayamp.training.archana.maxpeoplealive;
+package com.bayamp.archana.training.maxpeoplealive;
 
 import java.util.ArrayList;
 import java.util.Collections;
