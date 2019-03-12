@@ -63,6 +63,7 @@ public class StringUtility {
 			outputString = outputString + arr[i] + " ";
 
 		}
+		outputString=outputString.substring(0,outputString.length()-1);
 		return outputString;
 
 	}

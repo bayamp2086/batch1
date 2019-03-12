@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.bayamp.sonia.training.annotation.DataFile;
 import com.bayamp.sonia.training.utils.StringUtility;
+import com.bayamp.sonia.training.utils.SystemPrintClass;
 
 public class ReverseStringProgramTest {
 	
@@ -16,14 +17,38 @@ public class ReverseStringProgramTest {
 	@DataFile(file="resources/revertString.csv")
 	public void testReverseString(Map <String,String>reverseStringMAp) {
 		
-		String inputString=(String)reverseStringMAp.get("string");
-		String expected=(String)reverseStringMAp.get("expected");
+		String inputString=reverseStringMAp.get("string");
+		String expected=reverseStringMAp.get("expected");
 		
 		String actual=StringUtility.reverseString(inputString);
 		
 		Assert.assertEquals(actual, expected);
 		
 		Reporter.log(actual);
+		
+	}
+	
+	
+	
+	@Test(description="testreverseword", dataProvider="getDataforReverseString",
+			dataProviderClass=com.bayamp.sonia.training.utils.DataProviderUtility.class)
+	@DataFile(file="resources/revertString.csv")
+	public void testreverseWord(Map<String,String>reverseWordMap) {
+		
+		String inputString=reverseWordMap.get("string");
+		String expected=reverseWordMap.get("expected");
+		String actual=StringUtility.getreverseWords(inputString);
+		SystemPrintClass.print(actual);
+		
+		Assert.assertEquals(actual, expected);
+		
+		Reporter.log(actual);
+		
+	}
+	
+	@Test(description="findDuplicateChar",dataProvider="getDataforReverseString",
+			dataProviderClass=com.bayamp.sonia.training.utils.DataProviderUtility.class)
+	public void testDuplicateChar(Map<String,Integer>duplicateCharMap) {
 		
 	}
 
