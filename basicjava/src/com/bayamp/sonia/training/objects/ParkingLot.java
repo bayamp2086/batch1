@@ -1,49 +1,52 @@
 package com.bayamp.sonia.training.objects;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class ParkingLot implements CarParkingInterface {
 
-	
-   
-	
+	private List<Car> list = new ArrayList<Car>();
+	private static int remainingparkcounter = 10;
+	private static int totalparkcounter = 0;
+
 	@Override
 	public void park(Car c) {
 		// TODO Auto-generated method stub
-		c.totalparkcounter++;
-		c.remainingparkcounter--;
-		c.list.add(c);
-		
-		
+		totalparkcounter++;
+		remainingparkcounter--;
+		list.add(c);
+
 	}
-	
+
 	public int countParkedCar() {
-		
-		
-		return Car.totalparkcounter;
-		
+
+		return totalparkcounter;
+
 	}
-	
+
 	public int countRemainingParking() {
-		
-		
-		return Car.remainingparkcounter;
-		
+
+		return remainingparkcounter;
+
 	}
 
-	@Override
+	public int totalParking() {
+
+		return totalparkcounter + remainingparkcounter;
+
+	}
+
 	public void removePark(Car c) {
-		
-		c.totalparkcounter--;
-		c.remainingparkcounter++;
-		c.list.remove(c);
-		
+
+		totalparkcounter--;
+		remainingparkcounter++;
+		list.remove(c);
+
 	}
 
-	@Override
 	public List<Car> carList() {
 		// TODO Auto-generated method stub
-		return Car.list;
+		return list;
 	}
 
-	
 }
