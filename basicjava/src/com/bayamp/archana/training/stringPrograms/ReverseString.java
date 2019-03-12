@@ -1,4 +1,4 @@
-package com.bayamp.archana.training.utils;
+package com.bayamp.archana.training.stringPrograms;
 
 import java.util.regex.Pattern;
 
