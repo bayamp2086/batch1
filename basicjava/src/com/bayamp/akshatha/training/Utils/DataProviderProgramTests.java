@@ -99,7 +99,7 @@ public class DataProviderProgramTests {
 	
     
     @Test(priority=1,groups={"api","p1","addition"},dataProvider= "getMyDataFromCSV",dataProviderClass=DataProviderUtility.class)
-    @Data(file="main/resources/Data/addition.csv")
+    @Data(file="src/main/resources/Data/addition.csv")
     public void addNumbersTestFromCSVData(Map<String,Integer> data) {
 			
 		    int actualTotal=AdditionUtils.addTwoNumbers((int)data.get("Num1"), data.get("Num2"));
