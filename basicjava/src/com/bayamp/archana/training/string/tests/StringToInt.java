@@ -1,4 +1,4 @@
-package com.bayamp.archana.training.stringPrograms;
+package com.bayamp.archana.training.string.tests;
 
 public class StringToInt {
 

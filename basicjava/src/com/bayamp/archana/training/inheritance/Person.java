@@ -1,6 +1,6 @@
 package com.bayamp.archana.training.inheritance;
 
-public  class Person {
+public  class Person  {
 
 	protected String firstName;
 	protected String lastName;
