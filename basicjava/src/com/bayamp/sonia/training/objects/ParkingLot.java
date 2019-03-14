@@ -21,7 +21,7 @@ public class ParkingLot implements CarParkingInterface {
 			
 			System.err.print("Parking is Full, You Can Park only 10 Cars");
 			remainingparkcounter=0;
-			totalparkcounter=10;
+			totalparkcounter=totalParkingCounter;
 		}
 		
 		if(list.size()<totalParkingCounter) {
