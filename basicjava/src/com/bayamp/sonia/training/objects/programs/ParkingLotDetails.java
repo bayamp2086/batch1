@@ -20,8 +20,19 @@ public class ParkingLotDetails {
 		p.park(c1);
 		p.park(c2);
 		p.park(c3);
+		p.park(c3);
+		p.park(c3);
+		p.park(c3);
+		p.park(c3);
+		p.park(c3);
+		p.park(c3);
 		
-		SystemPrintClass.print("Total Parking Slots:"+p.totalParking());
+		
+		//if parked more than 10 cars
+		//p.park(c3);
+		
+		
+		SystemPrintClass.print("\nTotal Parking Slots:"+p.totalParking());
 		
 		SystemPrintClass.print("Parked Cars Details:"+p.carList());
 		SystemPrintClass.print("Total Parked Car :"+p.countParkedCar());
