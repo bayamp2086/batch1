@@ -1,4 +1,4 @@
-package com.bayamp.archana.training.arraytests;
+package com.bayamp.archana.training.string.tests;
 
 public class Student1 {
 	protected String firstName;

@@ -1,4 +1,4 @@
-package com.bayamp.archana.training.arraytests;
+package com.bayamp.archana.training.string.tests;
 
 public class StudDetails {
 	public Student1[] stud = new Student1[2];
