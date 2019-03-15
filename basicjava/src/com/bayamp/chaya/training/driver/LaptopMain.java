@@ -18,7 +18,7 @@ public class LaptopMain {
 		Comparator<Laptop> lap = new Comparator<Laptop>() {
 			@Override
 			public int compare(Laptop lap1, Laptop lap2) {
-				if (lap1.getPrice() > lap2.getPrice())
+				if (lap1.getRam() > lap2.getRam())
 					return 1;
 				else
 					return -1;
