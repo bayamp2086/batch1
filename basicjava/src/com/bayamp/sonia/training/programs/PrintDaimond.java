@@ -7,7 +7,7 @@ public class PrintDaimond {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int count=10;
+		int count=9;
 		ShapeUtil.printDiamond(count);
 
 	}
