@@ -18,6 +18,7 @@ public class IphoneProgram {
 		iph.add(i2);
 		iph.add(i3);
 
+//		when get index is not available use this iterator
 		/*Iterator<Iphone> itr2 = iph.iterator();
 		while (itr2.hasNext()) {
 			Iphone st = itr2.next();

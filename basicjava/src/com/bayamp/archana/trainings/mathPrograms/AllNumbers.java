@@ -2,9 +2,6 @@ package com.bayamp.archana.trainings.mathPrograms;
 
 import java.util.Arrays;
 
-import com.bayamp.archana.training.utils.FibonacciSeries;
-import com.bayamp.archana.training.utils.IterativeFactorial;
-import com.bayamp.archana.training.utils.RecursiveFactorial;
 import com.bayamp.archana.training.utils.SwapUtil;
 
 public class AllNumbers {
