@@ -11,11 +11,11 @@ public class ShapeUtil {
 			daimondStars = daimondStars + "0";
 		}
 
-		while (count > 1) {
+		while (count > 0) {
 
 			String replace = new String();
 			String replaceby = new String();
-			for (int i = 1; i < half; i++) {
+			for (int i = 0; i < half; i++) {
 				replace = replace + "0";
 				replaceby = replaceby + " ";
 			}
