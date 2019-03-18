@@ -10,8 +10,8 @@ public class SortPhones {
 		ArrayList<Iphone> iphoneList=new ArrayList<Iphone>();
 		
 		iphoneList.add(new Iphone("Iphone6s",64,"Black"));
-		iphoneList.add(new Iphone("Iphone7s",32,"Grey"));
-		iphoneList.add(new Iphone("Iphone 8",128,"White"));
+		iphoneList.add(new Iphone("Iphone8s",32,"Grey"));
+		iphoneList.add(new Iphone("Iphone7s",128,"White"));
 		Collections.sort(iphoneList);
 		
 		for(Iphone i:iphoneList) {
