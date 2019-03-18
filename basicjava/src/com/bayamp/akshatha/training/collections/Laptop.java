@@ -46,7 +46,7 @@ class LaptopModelComparator implements Comparator<Laptop>{
 	@Override
 	public int compare(Laptop l1, Laptop l2) {
 		
-		return l1.getModel().compareTo(l2.getModel());
+		return l1.getSize()-l2.getSize();
 		
 	}
 	
