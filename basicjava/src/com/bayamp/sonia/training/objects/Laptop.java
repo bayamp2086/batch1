@@ -16,6 +16,9 @@ public class Laptop implements Comparable<Laptop> {
 		this.brandName=brandName;
 		
 	}
+	public Laptop() {
+		
+	}
 	
 	public String getModelNo() {
 		return ModelNo;

@@ -7,8 +7,7 @@ public class FindDuplicateCharacters {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String inputString = "abc3445xy23";
-
+		String inputString = "aaabbbcc";
 		String duplicateChar = StringUtility.findDuplicateCharinString(inputString);
 
 		System.out.println("Duplicate Characters in String are " + duplicateChar);

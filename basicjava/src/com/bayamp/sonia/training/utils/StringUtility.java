@@ -98,8 +98,9 @@ public class StringUtility {
 
 		char[] duplicate = new char[inputString.length()];
 		int k = 0;
-		for (int i = 0; i < inputString.length(); i++) {
-
+		
+		while(inputString.length()>0) {
+			int i=0;
 			int count = findDuplicateChar(inputString, Character.toString((inputString.charAt(i))));
 			if (count > 1) {
 
@@ -107,6 +108,7 @@ public class StringUtility {
 				inputString = inputString.replaceAll(Character.toString(inputString.charAt(i)), "");
 				k++;
 			}
+			i++;
 		}
 		return duplicate;
 
@@ -120,7 +122,7 @@ public class StringUtility {
 
 		for (int i = 0; i < duplicateArr.length; i++) {
 
-			duplicateStrMsg = duplicateStrMsg + duplicateArr[i] + " ";
+			duplicateStrMsg = duplicateStrMsg + duplicateArr[i];
 		}
 
 		return duplicateStrMsg;

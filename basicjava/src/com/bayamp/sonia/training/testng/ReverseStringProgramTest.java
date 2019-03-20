@@ -48,7 +48,18 @@ public class ReverseStringProgramTest {
 	
 	@Test(description="findDuplicateChar",dataProvider="getDataforReverseString",
 			dataProviderClass=com.bayamp.sonia.training.utils.DataProviderUtility.class)
-	public void testDuplicateChar(Map<String,Integer>duplicateCharMap) {
+	@DataFile(file="resources/revertString.csv")
+	public void testDuplicateChar(Map<String,String>duplicateCharMap) {
+		
+		String inputString=duplicateCharMap.get("string");
+		String expected=duplicateCharMap.get("expected");
+		String actual=StringUtility.findDuplicateCharinString(inputString);
+		SystemPrintClass.print("Actual :"+actual);
+		SystemPrintClass.print("Expected :" +expected);
+		
+		Assert.assertEquals(actual, expected);
+		
+		Reporter.log(actual);
 		
 	}
 
