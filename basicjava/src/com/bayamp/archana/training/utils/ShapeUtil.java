@@ -1,6 +1,7 @@
 package com.bayamp.archana.training.utils;
 
 public class ShapeUtil {
+
 	public static void printSquare(int n) {
 
 		for (int i=0; i<n ; i++) {
@@ -64,5 +65,6 @@ public class ShapeUtil {
 	
     public static void printHollowDiamond(int n) {
 		
+
 	}
 }
