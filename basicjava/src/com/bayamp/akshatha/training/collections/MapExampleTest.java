@@ -36,9 +36,10 @@ public void countryNegativeTest(){
 	}
 }
 
+@Test
 public void countryNumberFormatTest() {
 	
-	String value1="123";
+	String value1="123h";
 	String value2="234";
 	
 	int total=Integer.parseInt(value1)+Integer.parseInt(value2);
