@@ -1,9 +1,12 @@
 package com.bayamp.chaya.training.collections;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
@@ -65,7 +68,10 @@ public class NewMapExample {
 		PrintElements(hashMapScore);
 		System.out.println();
 		System.out.println("****Printing LinkedHashMap****");
-		PrintElements(linkedHashMapScore);
+		Map<String, Integer> sortedMap = sortedTreeMapByValue(linkedHashMapScore);
+		PrintElements(sortedMap);
+
+		//PrintElements(linkedHashMapScore);
 		System.out.println();
 		System.out.println("****Printing TreeMap****");
 		//Map<String, Integer> sortedMap = sortedTreeMapByValue(treeMapScore);
@@ -73,7 +79,7 @@ public class NewMapExample {
 
 	}
 
-	/*private static Map<String, Integer> sortedTreeMapByValue (Map<String, Integer> MapScore) {
+	private static Map<String, Integer> sortedTreeMapByValue (Map<String, Integer> MapScore) {
 		List<Map.Entry<String, Integer>> sortByValueTreeMap = new LinkedList<Map.Entry<String, Integer>>(
 				MapScore.entrySet());
 		Collections.sort(sortByValueTreeMap, new Comparator<Map.Entry<String, Integer>>() {
@@ -84,11 +90,11 @@ public class NewMapExample {
 			}
 
 		});
-		Map<String, Integer> SortedTree = new TreeMap<String, Integer>();
+		Map<String, Integer> SortedTree = new LinkedHashMap<String, Integer>();
 		for (Map.Entry<String, Integer> entry : sortByValueTreeMap) {
 			SortedTree.put(entry.getKey(), entry.getValue());
 		}
 		return SortedTree;
-	}*/
+	}
 
 }
