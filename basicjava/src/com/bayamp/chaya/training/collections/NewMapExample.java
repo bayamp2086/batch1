@@ -50,14 +50,14 @@ public class NewMapExample {
 	public static void main(String[] args) {
 		Map<String, Integer> hashMapScore = new HashMap<String, Integer>();
 		Map<String, Integer> linkedHashMapScore = new LinkedHashMap<String, Integer>();
-		Map<String, Integer> treeMapScore = new TreeMap<String, Integer>(new Comparator<String>(){
+		Map<String, Integer> treeMapScore = new TreeMap<String, Integer>(new Comparator<String>() {
 
 			@Override
 			public int compare(String o1, String o2) {
 				// TODO Auto-generated method stub
 				return o2.compareTo(o1);
 			}
-			
+
 		});
 
 		addElements(hashMapScore);
@@ -70,16 +70,13 @@ public class NewMapExample {
 		System.out.println("****Printing LinkedHashMap****");
 		Map<String, Integer> sortedMap = sortedTreeMapByValue(linkedHashMapScore);
 		PrintElements(sortedMap);
-
-		//PrintElements(linkedHashMapScore);
 		System.out.println();
 		System.out.println("****Printing TreeMap****");
-		//Map<String, Integer> sortedMap = sortedTreeMapByValue(treeMapScore);
 		PrintElements(treeMapScore);
 
 	}
 
-	private static Map<String, Integer> sortedTreeMapByValue (Map<String, Integer> MapScore) {
+	private static Map<String, Integer> sortedTreeMapByValue(Map<String, Integer> MapScore) {
 		List<Map.Entry<String, Integer>> sortByValueTreeMap = new LinkedList<Map.Entry<String, Integer>>(
 				MapScore.entrySet());
 		Collections.sort(sortByValueTreeMap, new Comparator<Map.Entry<String, Integer>>() {
