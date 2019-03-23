@@ -1,6 +1,7 @@
 package com.bayamp.akshatha.training.collections;
 
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -24,6 +25,7 @@ public class MapObjectExample {
 		//Iterate over the keys and then get the value.
 		for(String key:keySet) {
 			BankAccount bankAccount=map.get(key);
+			System.out.println(key);
 			System.out.println(bankAccount);
 		}
 		//Iterate using keyset()
@@ -72,7 +74,6 @@ public class MapObjectExample {
 		map.put(b3.getAccno(), b3);
 		map.put(b4.getAccno(), b4);
 		map.put(b5.getAccno(), b5);
-		
 		
 		return map;
 		
