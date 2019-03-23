@@ -1,5 +1,7 @@
 package com.bayamp.sonia.training.collections;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import com.bayamp.sonia.training.utils.CollectionsUtils;
@@ -22,10 +24,14 @@ public class HashMapCountValExample {
 		System.out.println(numberMap);
 
 		String str = "abcdabcdabcdabcdab";
+		str = "aaabbxaadbbbbym";
+		
+		
 
 		String outPutStr = CollectionsUtils.getCharCountString(str);
 		System.out.println(outPutStr);
-
+		
+		
 	}
 
 }

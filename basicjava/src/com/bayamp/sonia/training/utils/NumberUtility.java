@@ -95,28 +95,45 @@ public class NumberUtility {
 		}
 	}
 	
+	/*
+	 * public static int[] findMissingNumber(int[] inputArr) {
+	 * 
+	 * int missingArr[] = new int[inputArr.length];
+	 * 
+	 * int k = 0; int count = inputArr[0];
+	 * 
+	 * for (int i = 0; i < inputArr.length; i++) {
+	 * 
+	 * if (inputArr[i] == count) {
+	 * 
+	 * } else { missingArr[k] = count; k++; count++;
+	 * 
+	 * } count++; }
+	 * 
+	 * return missingArr; }
+	 */
+	
 	public static int[] findMissingNumber(int[] inputArr) {
 
 		int missingArr[] = new int[inputArr.length];
-
-		int k = 0;
-		int count = inputArr[0];
-
-		for (int i = 0; i < inputArr.length; i++) {
-
-			if (inputArr[i] == count) {
-
-			} else {
-				missingArr[k] = count;
-				k++;
-				count++;
-
-			}
-			count++;
+		
+		int missingArr1[] = new int[inputArr.length];
+		int count=0;
+		for(int i:inputArr) {
+			missingArr[i]=1;
 		}
-
-		return missingArr;
+		
+		for(int k=0;k<missingArr.length;k++) {
+			
+			if(missingArr[k]==0) {
+				missingArr1[count]=k;
+				count++;
+			}
+		}
+		return missingArr1;
 	}
+	
+	
 	
 	
 	
