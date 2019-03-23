@@ -3,7 +3,11 @@ package com.bayamp.archana.training.lambdaExpression;
 public class LambdaExpression {
 	public static void main(String[] args) {
 		// only in java 8 
-
+		
+		// pass arguments in interface
+				A obj = (i) -> System.out.println("Hello " +i);
+				obj.show(6);
+				
 		/*A obj = new B();
 		obj.show();*/
 
@@ -28,11 +32,7 @@ public class LambdaExpression {
 		obj.show();*/
 		
 		
-		// pass arguments in interface
-		A obj = (i) -> System.out.println("Hello " +i);
-		obj.show(6);
 		
-		//obj.ShowArg(i);
 
 	}
 }
