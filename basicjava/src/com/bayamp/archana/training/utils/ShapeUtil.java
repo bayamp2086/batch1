@@ -3,6 +3,7 @@ package com.bayamp.archana.training.utils;
 public class ShapeUtil {
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	public static void printSquare(int n) {
       int space = n-1;
 		for (int i=0; i<n ; i++) {
@@ -73,6 +74,8 @@ public class ShapeUtil {
     public static void printHollowDiamond(int n) {
 		
 =======
+=======
+>>>>>>> Stashed changes
 	public static void printDiamond(int n) {
 		// int n = 3;
 		int space = n - 1;
@@ -109,6 +112,9 @@ public class ShapeUtil {
 	}
 
 	public static void printHalfDiamond() {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 	}
