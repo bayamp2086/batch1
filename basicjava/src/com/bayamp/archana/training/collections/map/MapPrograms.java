@@ -2,6 +2,7 @@ package com.bayamp.archana.training.collections.map;
 
 public class MapPrograms {
 	public static void main (String[] args) {
+<<<<<<< Updated upstream
 		/*System.out.println(MapUtils.Capital("India")+"\n");
 		MapUtils.printCountryOfSet();
 		
@@ -10,6 +11,14 @@ public class MapPrograms {
 		//MapUtils.mapSetListColl();
 		//MapUtils.checkCountry("India");
 		//MapUtils.getCapital1("Germany");
+=======
+		System.out.println(MapUtils.Capital("India")+"\n");
+		MapUtils.printCountryOfSet();
+		
+		System.out.println("\n"+(MapUtils.getCapital1("USA"))+"\n");
+		MapUtils.printEntrySet();
+		MapUtils.mapSetListColl();
+>>>>>>> Stashed changes
 	}
 
 }

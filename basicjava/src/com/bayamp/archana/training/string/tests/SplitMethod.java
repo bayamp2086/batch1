@@ -3,7 +3,7 @@ package com.bayamp.archana.training.string.tests;
 public class SplitMethod {
 
 	public static void main(String[] args) {
-		String s = "My name is Chaya";
+		String s = "Hello to this world";
 		String[] words = s.split("\\s");
 		for (String w : words) {
 			System.out.println(w);

@@ -2,6 +2,7 @@ package com.bayamp.archana.training.utils;
 
 public class ShapeUtil {
 
+<<<<<<< Updated upstream
 	public static void printSquare(int n) {
       int space = n-1;
 		for (int i=0; i<n ; i++) {
@@ -71,6 +72,44 @@ public class ShapeUtil {
 	
     public static void printHollowDiamond(int n) {
 		
+=======
+	public static void printDiamond(int n) {
+		// int n = 3;
+		int space = n - 1;
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < space; j++) {
+				System.out.println("");
+			}
+			for (int j = 0; j < i; j++) {
+				System.out.println("*");
+				System.out.print("\n");
+				space--;
+			}
+		}
+	}
+
+	public static void printHollowDiamond() {
+		{
+			for (int i = 5; i > -5; i--) {
+				for (int j = 0; j < i; j++) {
+					System.out.print(" ");
+				}
+				for (int j = 0; j >= i; j--) {
+					System.out.print(" ");
+				}
+				System.out.println("*");
+			}
+		}
+
+	}
+
+	public static void printCircle() {
+
+	}
+
+	public static void printHalfDiamond() {
+>>>>>>> Stashed changes
 
 	}
 }

@@ -10,15 +10,26 @@ public class MapTest {
 	@Test
 	public void countryPositiveTest() {
 		String expected = "Delhi";
+<<<<<<< Updated upstream
 		String actual = MapUtils.Capital("India") ;
+=======
+		String actual = MapUtils.getCapital1("India") ;
+>>>>>>> Stashed changes
 		Assert.assertEquals(actual, expected);
 		Reporter.log(actual, true);
 	}
 	
+<<<<<<< Updated upstream
 	//@Test
 	public void countryNegativeTest() {
 		String expected = "does not exist in the db " ;
 		String actual = MapUtils.checkCountry("Germany");
+=======
+	@Test
+	public void cpuntryNegativeTest() {
+		String expected =null;
+		String actual = MapUtils.getCapital1("Germany");
+>>>>>>> Stashed changes
 		Assert.assertEquals(actual, expected);
 	}
 	
