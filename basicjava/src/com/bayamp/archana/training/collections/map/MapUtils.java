@@ -11,7 +11,7 @@ import java.util.Set;
 public class MapUtils {
     // making map private 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 	private static Map<String, String> countryAndCapitals = new HashMap<String, String>();
 	static{
 		countryAndCapitals.put("India", "Delhi");
@@ -33,6 +33,8 @@ public class MapUtils {
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 	private static Map<String, String> countryCapitals = new HashMap<String, String>();
 	static{
 		countryCapitals.put("India", "Delhi");
@@ -52,7 +54,7 @@ public class MapUtils {
 	public static void printCountryOfSet() {
 		Set<String> keyOfcountryCapitalsMap = countryCapitals.keySet();
 <<<<<<< Updated upstream
->>>>>>> Stashed changes
+
 =======
 >>>>>>> Stashed changes
 		System.out.println("The list of countries are ");
@@ -60,7 +62,7 @@ public class MapUtils {
 			System.out.println(setKey);	
 		}	
 	}
-<<<<<<< Updated upstream
+
 <<<<<<< Updated upstream
 	
 	// to check if the country is present (Neg testcase)
@@ -92,11 +94,10 @@ public class MapUtils {
 	public static void printEntrySet() {
 		
 	 Set<Entry<String,String>> mapEntrySet = countryAndCapitals.entrySet();
-	 
-=======
+
+
 =======
 >>>>>>> Stashed changes
-
 	// i want to see if the country exist
 	public static String getCapital1(String country) {
 		Set<String> keyOfcountryCapitalsMap = countryCapitals.keySet();
@@ -112,12 +113,15 @@ public class MapUtils {
 	// Set< Entry<String,String> >
 	// Set< Map<String,String> >
 
+<<<<<<< Updated upstream
+	public static void printEntrySet3() {
+		
+	  Set<Entry<String,String>> mapEntrySet = countryCapitals.entrySet();
+
+=======
 	public static void printEntrySet() {
 		
 	  Set<Entry<String,String>> mapEntrySet = countryCapitals.entrySet();
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
 	  for( Entry<String, String>  Entry : mapEntrySet) { 
 		  System.out.println(Entry);
@@ -130,11 +134,13 @@ public class MapUtils {
 	 // changing map to set to list and doing sorting in collections 
 	  public static void mapSetListColl() {
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 		  Set<String> keyOfcountryCapitalsMap = countryAndCapitals.keySet();
-=======
-		  Set<String> keyOfcountryCapitalsMap = countryCapitals.keySet();
->>>>>>> Stashed changes
+
+		  //Set<String> keyOfcountryCapitalsMap = countryCapitals.keySet();
+
+		 // Set<String> keyOfcountryCapitalsMap = countryCapitals.keySet();
+
 =======
 		  Set<String> keyOfcountryCapitalsMap = countryCapitals.keySet();
 >>>>>>> Stashed changes

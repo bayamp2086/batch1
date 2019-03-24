@@ -11,33 +11,33 @@ public class MapTest {
 	public void countryPositiveTest() {
 		String expected = "Delhi";
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 		String actual = MapUtils.Capital("India") ;
+
+		//String actual = MapUtils.getCapital1("India") ;
+
+
+		Assert.assertEquals(actual, expected);
+		Reporter.log(actual, true);
+	}
+
+	//@Test
+	public void countryNegativeTest() {
+		String expected = "does not exist in the db " ;
+	}
 =======
 		String actual = MapUtils.getCapital1("India") ;
->>>>>>> Stashed changes
-=======
-		String actual = MapUtils.getCapital1("India") ;
->>>>>>> Stashed changes
 		Assert.assertEquals(actual, expected);
 		Reporter.log(actual, true);
 	}
 	
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-	//@Test
-	public void countryNegativeTest() {
-		String expected = "does not exist in the db " ;
-		String actual = MapUtils.checkCountry("Germany");
-=======
-=======
 >>>>>>> Stashed changes
 	@Test
 	public void cpuntryNegativeTest() {
 		String expected =null;
 		String actual = MapUtils.getCapital1("Germany");
 <<<<<<< Updated upstream
->>>>>>> Stashed changes
+
 =======
 >>>>>>> Stashed changes
 		Assert.assertEquals(actual, expected);
