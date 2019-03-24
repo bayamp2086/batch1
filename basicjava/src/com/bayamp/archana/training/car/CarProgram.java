@@ -1,5 +1,8 @@
 package com.bayamp.archana.training.car;
 
+import java.util.Set;
+import java.util.TreeSet;
+
 public class CarProgram {
 
 	public static void main(String[] args) {
@@ -21,5 +24,8 @@ public class CarProgram {
 		
 //		ParkingLot milpitasParkingLot = new ParkingLot();
 //		milpitasParkingLot.park(c2);
+		
+		Set<Car> myCarList = new TreeSet<Car>();
+		myCarList.add(c1);
 	}
 }

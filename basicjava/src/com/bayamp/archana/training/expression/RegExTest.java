@@ -6,7 +6,7 @@ public class RegExTest {
 		String phone1 = "(408)806-6887";
 		String phone2 = "(408)8066887";
 		String phone3 = "(408)abd-6887";
-		String email = "Rish-123@bayamp.com";
+		String email = "rish-123@bayamp.com";
 		String name = "Archana";
 		String date = "09-02-2019";
 		
@@ -24,7 +24,7 @@ public class RegExTest {
 				//* means zero or more courrences
 				//? means at the most one (0 or 1)
 				//+one or more occurences
-		String email2 = "^[a-zA-Z0-9]{2,6}-[0-9]{2,6}@[a-zA-Z0-9]{2,8}.[a-zA-Z.]{2,6}$";
+		String email2 = "^[a-z]{2,6}-?[0-9]{2,6}@[a-zA-Z0-9]{2,8}.[a-zA-Z.]{2,3}$";
 		return email.matches(email2);		
     }
 	private static boolean isValidName(String name) {

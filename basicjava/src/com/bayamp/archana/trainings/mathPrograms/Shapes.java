@@ -7,11 +7,11 @@ public class Shapes{
 	
 	public static void main(String[] args) {
 	
-		ShapeUtil.printSquare(3);
+		ShapeUtil.printSquare(5);
 		System.out.println("\n");
-		ShapeUtil.printDiamond1(5);
+		//ShapeUtil.printDiamond1(5);
 		System.out.println("\n");
-		ShapeUtil.printDiamond(5);
+		//ShapeUtil.printDiamond(5);
 	}
 	
 	

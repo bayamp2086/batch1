@@ -3,16 +3,22 @@ package com.bayamp.archana.training.utils;
 public class ShapeUtil {
 
 	public static void printSquare(int n) {
-
+      int space = n-1;
 		for (int i=0; i<n ; i++) {
-			System.out.println("-");
-			for (int j=0; j<n ; j++) {		
-				System.out.print("* ");	
+			for(int k=0; k<space; k++) {
+				System.out.print(" ");
 			}
+				
+				space--;
+			for (int j=0; j<=i ; j++) {	
+				System.out.print("*");	
+			}
+			System.out.println();
 		}
+		
 	}
 	
-	public static void printDiamond1( int n) {
+	/*public static void printDiamond1( int n) {
 		//int n = 5;
 		for (int i=1; i<=n; i++ ) {
 			
@@ -21,9 +27,9 @@ public class ShapeUtil {
 			}
 				System.out.println(i);
 		}
-	}
+	}*/
 	
-	public static void printDiamond(int n) {
+	/*public static void printDiamond(int n) {
       //  int n=5;
         int space = n - 1; 
       
@@ -51,13 +57,13 @@ public class ShapeUtil {
                 System.out.print(" "); 
       
           
-            for (int j = 0; j < i; j++) 
+            for (int j = 0; j < i; j++) a
                 System.out.print("* "); 
       
             System.out.print("\n"); 
             space++; 
         } 
-			}	
+			}	*/
 	
 	public static void printCircle(int n) {
 		

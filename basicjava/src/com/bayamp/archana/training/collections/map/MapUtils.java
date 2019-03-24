@@ -56,13 +56,14 @@ public class MapUtils {
 		return countryAndCapitals.get(country);
 	}
 
-	// if both key and value is needed entry set is used
+	//(looping both key and value) entry set is used
 	// Set< Entry<String,String> >
 	// Set< Map<String,String> >
-
+//p
 	public static void printEntrySet() {
 		
-	  Set<Entry<String,String>> mapEntrySet = countryAndCapitals.entrySet();
+	 Set<Entry<String,String>> mapEntrySet = countryAndCapitals.entrySet();
+	 
 	  for( Entry<String, String>  Entry : mapEntrySet) { 
 		  System.out.println(Entry);
 		  String key = Entry.getKey(); 
