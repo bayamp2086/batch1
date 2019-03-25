@@ -31,6 +31,13 @@ public class HashMapCountValExample {
 		String outPutStr = CollectionsUtils.getCharCountString(str);
 		System.out.println(outPutStr);
 		
+		str = "aaabbxaadddy";
+		
+		
+
+		String outPutStr1 = CollectionsUtils.getCharCountStringbySequence(str);
+		System.out.println(outPutStr1);
+		
 		
 	}
 

@@ -1,5 +1,6 @@
 package com.bayamp.sonia.training.utils;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -188,5 +189,77 @@ public class CollectionsUtils {
 		
 		return sortedFruitMap;
 	}
+
+	public static String getCharCountStringbySequenceList(String inputStr) {
+		Map<String, Integer> charMap = new HashMap<String, Integer>();
+
+		String outPutStr = new String();
+
+		char[] charArray = inputStr.toCharArray();
+		
+		List<String> listTemp=new ArrayList<String>();
+
+
+		for (char charS : charArray) {
+
+			if (listTemp.contains(String.valueOf(charS))) {
+				
+				listTemp.add(String.valueOf(charS));
+
+			} 
+			
+			else {
+				
+				if(listTemp.size()>0) {
+				outPutStr=outPutStr+listTemp.get(0)+listTemp.size();
+				}
+				listTemp.clear();
+				listTemp.add(String.valueOf(charS));
+
+			}
+		
+		}
+		
+		if(listTemp.size()>0) {
+			outPutStr=outPutStr+listTemp.get(0)+listTemp.size();
+			}
+
+		
+		return outPutStr;
+
+	}
+	
+	
+	public static String getCharCountStringbySequence(String inputStr) {
+		
+		String outPutStr = new String();
+
+		char[] charArray = inputStr.toCharArray();
+		int counter=1;
+		String first=String.valueOf(charArray[0]);
+		for (int i=1;i<charArray.length;i++) {
+			
+			String second=String.valueOf(charArray[i]);
+			if(first.equals(second)) {
+				
+				counter++;
+				//outPutStr=char1+counter;
+				
+			}else if(!first.equals(second)) {
+				
+				
+				outPutStr=outPutStr+first+counter;
+				counter=1;
+			}
+			
+			first=second;
+			
+		}
+		outPutStr=outPutStr+first+counter;
+		return outPutStr;
+
+	}
+
+
 
 }
