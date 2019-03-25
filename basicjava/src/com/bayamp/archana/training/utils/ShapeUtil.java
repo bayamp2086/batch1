@@ -66,9 +66,8 @@ public class ShapeUtil {
 			}	*/
 
 
-=======
->>>>>>> Stashed changes
-	public static void printDiamond(int n) {
+
+/*	public static void printDiamond(int n) {
 		// int n = 3;
 		int space = n - 1;
 
@@ -83,8 +82,8 @@ public class ShapeUtil {
 			}
 		}
 	}
-
-	public static void printHollowDiamond() {
+*/
+/*	public static void printHollowDiamond() {
 		{
 			for (int i = 5; i > -5; i--) {
 				for (int j = 0; j < i; j++) {
@@ -105,13 +104,52 @@ public class ShapeUtil {
 
 	public static void printHalfDiamond() {
 
-<<<<<<< Updated upstream
+
 
 	}
-}
-
-
-=======
+*/
+	
+	public static void printDiamond(int n) {
+		
+		int temp = n+1;
+		int height = n*2+1;
+		
+		for (int i =0; i < height; i++) {
+			
+//			for() {
+//				
+//			}
+			
+			for(int j =0; j< 2*i+1; j++) {
+				System.out.print("* ");
+			}
+			
+			if(i>n) {
+				
+				for(int k =0; k < temp ; k++) {
+					System.out.print("* ");
+					temp--;
+				}
+				
+				
+			}
+			
+			
+			
+			System.out.println();
+			
+		}
+		
+		
+		
+		
 	}
-}
->>>>>>> Stashed changes
+	
+	
+	
+
+
+
+	}
+
+
