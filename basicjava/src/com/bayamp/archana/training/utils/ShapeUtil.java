@@ -2,7 +2,6 @@ package com.bayamp.archana.training.utils;
 
 public class ShapeUtil {
 
-<<<<<<< Updated upstream
 	public static void printSquare(int n) {
       int space = n-1;
 		for (int i=0; i<n ; i++) {
