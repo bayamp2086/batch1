@@ -1,52 +1,51 @@
 package com.bayamp.akshatha.training.coding.programs;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class CountOfOccurence {
 
 	public static void main(String[] args) {
-		String s = "aaabbnaa";
+		String s = "aaabbnaaiy";
 
 		Map<Character, Integer> countMap = countDictionary(s);
-		String result = "";
+		String result1 = "";
 		// Append unique characters along with count
 		for (Character c : countMap.keySet()) {
-			result = result + c + countMap.get(c);
+			result1 = result1 + c + countMap.get(c);
 		}
-		System.out.println(result);
+		System.out.println("Total Count of each characters : " + result1);
 
-		// count of occurences of all characters in sorted array without map
-		int[] result1 = countSortedArray(s);
-
-		System.out.println(Arrays.toString(result1));
+		String result2 = countChar(s);
+		System.out.println("Total Count of preceeding character : " + result2);
 	}
 
-	private static int[] countSortedArray(String s) {
-		String sorted = BubbleSort.bubbleSortString(s);
+	private static String countChar(String s) {
 
-		String str[] = sorted.split("");
-		int i = 0;
-		int[] count = new int[str.length];
+		if (s == null | s == "") {
+			return "0";
+		}
+		char[] charArray = s.toCharArray();
+		StringBuffer result = new StringBuffer();
 
-		count[0] = 1;
+		result.append(charArray[0]);
+		int count = 1;
 
-		for (int j = 0; j < str.length - 1; j++) {
+		for (int j = 0; j < charArray.length - 1; j++) {
 
-			if (!str[j].equalsIgnoreCase(str[j + 1])) {
-
-				i++;
-				count[i] = 1;
+			if (charArray[j] != charArray[j + 1]) {
+				result.append(count);
+				result.append(charArray[j + 1]);
+				count = 1;
 			} else {
-				// System.out.println(count[i]);
-				count[i] = count[i] + 1;
+
+				count++;
 
 			}
 		}
+		result.append(count);
 
-		return Arrays.copyOf(count, i + 1);
+		return result.toString();
 	}
 
 	private static Map<Character, Integer> countDictionary(String s) {
