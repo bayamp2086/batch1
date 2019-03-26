@@ -151,4 +151,57 @@ public class StringUtility {
 
 	}
 
+	public static boolean checkEmailpattern(String email) {
+		/*	? at the most one 0 or 1
+		 *  + atleast one
+		 * \d digit
+			\D non Digit [a-zA-Z]
+			\w word character[a-z][0-9]
+			\\W non word character only special character
+			\s white space \t\r\n
+			\S non white space \w \\w \d \D
+			*/
+		
+		//email 6-8 - 3-4 numbers@bayamp.com
+				//harish-123@bayamp.com
+				//harish@bayamp.com
+				//ssn
+				
+		String pattern="\\w{6,8}\\-?\\d{0,3}@bayamp.com";
+		return email.matches(pattern);
+	
+	}
+	
+	public static boolean checkPasswordpattern(String pwd) {
+		
+		
+		//password pattern
+		//Alphanumeric and one special characters
+		//Length Min 6 max 8
+		//Always Starts with one Capital Letter and rest lower alphanumeric
+		//Ends with one special characters of this list{!@$%#}
+		
+		//Sonia@
+		
+		String pattern="[A-Z][a-z 0-9]{4,6}[!@$%#]";
+		return pwd.matches(pattern);
+		
+	}
+	
+	public static boolean checkPasswordpattern1(String pwd) {
+		
+		
+		/*Your password must have at least:
+
+		     8 characters
+		     1 uppercase
+		     1 numeric*/
+		
+		String pattern="[A-Z a-z 0-9]{8,}";
+		return pwd.matches(pattern);
+		
+	}
+	
+	
+
 }
