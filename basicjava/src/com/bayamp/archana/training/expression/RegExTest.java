@@ -9,6 +9,7 @@ public class RegExTest {
 		String email = "rish-123@bayamp.com";
 		String name = "Archana";
 		String date = "09-02-2019";
+		String password = "Archu@19";
 		
 		boolean check = isValidPhone(phone1);
 		System.out.println("The phone no is "+check);
@@ -18,6 +19,12 @@ public class RegExTest {
 		System.out.println("The name is "+checkName);
 		boolean checkDate = isValidDate(date);
 		System.out.println("The date is "+checkDate);
+		boolean checkPasswrd = isValidPasswrd(password);
+		System.out.println("The password is "+checkPasswrd);
+	}
+	private static boolean isValidPasswrd(String password) {
+		String rexPasswrd = "^[A-Z][a-z0-9]{6,6}[@!%#$]{0,1}";
+		return password.matches(rexPasswrd);	
 	}
 	private static boolean isValidEmail(String email) {
 		        //. means anythg no letter any charch
@@ -28,7 +35,7 @@ public class RegExTest {
 		return email.matches(email2);		
     }
 	private static boolean isValidName(String name) {
-		String namePattern = "^[a-zA-Z]{2,9}$";
+		String namePattern = "^[a-z[]A-Z]{2,9}$";
 		return name.matches(namePattern);	
     }
 	private static boolean isValidPhone(String phone1) {
