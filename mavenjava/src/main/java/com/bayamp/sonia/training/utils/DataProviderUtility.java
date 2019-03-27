@@ -120,8 +120,26 @@ public class DataProviderUtility {
 			}
 			return outArr;
 			
+	}
 		
-		
+
+		@DataProvider(name="checkPasswordLength")
+		private static Object[][] getDatafromCSVforPasswordLength(Method method) throws IOException{
+			
+			String fileName=getFileNamefromAnnotation(method);
+			List<CSVRecord> csvRows=getCSVParser(fileName);
+			
+			CSVRecord header=csvRows.get(0);
+			Object outArr[][] = new Object[csvRows.size()-1][1];
+			int counter=0;
+			for(int i=1;i<csvRows.size();i++) {
+				
+				CSVRecord value=csvRows.get(i);
+				outArr[counter][0]=value.get(0);
+				counter++;
+			}
+			return outArr;
+			
 	}
 
 }
