@@ -1,4 +1,4 @@
-package com.bayamp.chaya.training.collections;
+package com.bayamp.chaya.training.regularexpression;
 
 public class RegularExpression {
 
@@ -8,10 +8,11 @@ public class RegularExpression {
 		String phone3="(669ab48373";
 
 		String phone4="669-2148373";
+		String name1 = "harish-123@bayamp.com";
 
-		
-boolean check = isValidPhone(phone1);
-System.out.println(check);
+		boolean check = isValidPhone(name1);
+		System.out.println(check);
+
 	}
 //.=any character
 //* anything
@@ -22,6 +23,8 @@ System.out.println(check);
 		String name1 = "harish-123@bayamp.com";
 		
 		return name1.matches(namePattern);
+
+
 	}
 
 }

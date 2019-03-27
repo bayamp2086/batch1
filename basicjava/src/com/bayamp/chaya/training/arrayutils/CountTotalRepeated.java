@@ -39,25 +39,41 @@ public class CountTotalRepeated {
 			System.out.println(entry.getKey() + ":" + entry.getValue());
 		}
 	}
-	private static void charCountRepeat(String s){
-		char[] charCount =s.toCharArray();
-		int count=0;
-		Map<Character,Integer> charMap = new LinkedHashMap<Character,Integer>();
+
+	private static void charCountRepeat(String s) {
+		char[] charCount = s.toCharArray();
+		int count = 0;
+		Map<Character, Integer> charMap = new LinkedHashMap<Character, Integer>();
 		for (int i = 0; i < charCount.length; i++) {
 			charMap.put(charCount[i], count);
 			for (int j = 0; j < charCount.length; j++) {
-				if(charCount[i]==charCount[j]){
+				if (charCount[i] == charCount[j]) {
 					count++;
 					charMap.replace(charCount[i], count);
 				}
-				
+
 			}
-			count=0;
+			count = 0;
 		}
 		for (Map.Entry<Character, Integer> entry : charMap.entrySet()) {
 			System.out.println(entry.getKey() + ":" + entry.getValue());
 		}
-		
+
+	}
+
+	private static void stringCompress(String s) {
+		String output = "";
+		int count = 1;
+		for (int i = 0; i < s.length() - 1; i++) {
+			if (s.charAt(i) == s.charAt(i + 1)) {
+				count++;
+			} else {
+				output = output + s.charAt(i) + count;
+				count = 1;
+			}
+		}
+		output = output + s.charAt(s.length() - 1) + count;
+		System.out.print(output);
 	}
 
 	public static void main(String[] args) {
@@ -66,8 +82,12 @@ public class CountTotalRepeated {
 
 		int[] numbers = { 5, 5, 6, 2, 7, 2, 8, 8 };
 		integerRepeatedCount(numbers);
-		
+
 		String characters = "aaabbcdddddd";
 		charCountRepeat(characters);
+
+		String string = "abbcvvr";
+
+		stringCompress(string);
 	}
 }
