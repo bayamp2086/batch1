@@ -13,7 +13,9 @@ public class ParkingLot {
 			carCount = carCount +1;
 			return true;
 		}
+		System.out.println("The parking lot has 5 slots");
 		return false;
+		
 	}
 	
 	

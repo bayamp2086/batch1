@@ -1,15 +1,15 @@
 package com.bayamp.archana.training.interfaces;
 
-public class Person {
+public class Person implements IPerson, AnotherInterface {
 
 	protected String firstName;
 	protected String lastName;
 	protected String gender;
-	protected String address;
+	protected AddressForPerson address;
 	protected String ssn;
 	protected static int count = 0;
 
-	protected Person(String fName, String lName, String gender, String address, String ssn) {
+	protected Person(String fName, String lName, String gender, AddressForPerson address, String ssn) {
 		this.firstName = fName;
 		this.lastName = lName;
 		this.gender = gender;
@@ -23,9 +23,22 @@ public class Person {
 		return "FirstName:" + this.firstName + "\n" + "LastName:" + this.lastName + "\n" + "Gender:" + this.gender
 				+ "\n" + "Address:" + this.address + "\n" + "SSN:" + this.ssn;
 	}
-
-	public static int getCount() {
+	
+	@Override
+	public int counter() {
+		// TODO Auto-generated method stub
 		return count;
+	}
+	@Override
+	public String salary() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int id() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	// the static method will not b overloading
@@ -79,5 +92,9 @@ public class Person {
 	}
 	return false;
 	}
+
 	
+
+	
+
 }

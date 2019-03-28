@@ -1,30 +1,31 @@
 package com.bayamp.archana.training.interfaces;
 
-public class Student extends Person {
+public class Student extends Person implements IPerson, AnotherInterface {
 
-	protected String id;
-	protected String gpa;
-	private static int studCount=0;
-	
-	public Student(String fName, String lName, String gender, String address, String ssn) {
+	public Student(String fName, String lName, String gender, AddressForPerson address, String ssn) {
 		super(fName, lName, gender, address, ssn);
-		studCount = studCount + 1;
+		//studCount = studCount + 1;
 		// TODO Auto-generated constructor stub
 	}
-
-	public void studentDetails(String ID, String gpa) {
-		this.id = ID;
-		this.gpa = gpa;
+	@Override
+	public int counter() {
+		// TODO Auto-generated method stub
+		return count;
 	}
 
-	public String toString() {
-		
-		return super.toString()+ "\n"+"ID:"+ this.id + "\n" + "GPA:"+ this.gpa;
-		
+	@Override
+	public String salary() {
+		// TODO Auto-generated method stub
+		return null;
 	}
-	public static int studentCount() {
-		return studCount;
+
+	@Override
+	public int id() {
+		// TODO Auto-generated method stub
+		int random = (int) (Math.random()*80);
+		return random;
 	}
+	
 	
 	public boolean myEquals(Object o) {
 		System.out.println("Student");
@@ -41,6 +42,8 @@ public class Student extends Person {
 		System.out.println("Student");
 		return true;	
 	}
+
+
 }
 
 

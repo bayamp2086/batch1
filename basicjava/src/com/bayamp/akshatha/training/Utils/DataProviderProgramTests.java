@@ -76,11 +76,11 @@ public class DataProviderProgramTests {
 	
 	@Test(dataProvider= "getMyDataArray")
 	
-	public void addNumbersTest(Object[] testData) {
-		
-		int actualtotal=(int)testData[0]+(int)testData[1];
+	public void addNumbersTest(Object[][] testData) {
+		for(Object[] d:testData) {
+		int actualtotal=(int)d[0]+(int)d[1];
 		Reporter.log(""+actualtotal,true);
-		
+		}
 		
 	}
 	
@@ -99,7 +99,7 @@ public class DataProviderProgramTests {
 	
     
     @Test(priority=1,groups={"api","p1","addition"},dataProvider= "getMyDataFromCSV",dataProviderClass=DataProviderUtility.class)
-    @Data(file="main/resources/Data/addition.csv")
+    @Data(file="src/main/resources/Data/addition.csv")
     public void addNumbersTestFromCSVData(Map<String,Integer> data) {
 			
 		    int actualTotal=AdditionUtils.addTwoNumbers((int)data.get("Num1"), data.get("Num2"));

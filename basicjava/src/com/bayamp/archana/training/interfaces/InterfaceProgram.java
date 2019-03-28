@@ -2,7 +2,7 @@ package com.bayamp.archana.training.interfaces;
 
 public class InterfaceProgram extends Person {
 
-	InterfaceProgram(String fName, String lName, String gender, String address, String ssn) {
+	InterfaceProgram(String fName, String lName, String gender, AddressForPerson address, String ssn) {
 		super(fName, lName, gender, address, ssn);
 		// TODO Auto-generated constructor stub
 	}
@@ -52,9 +52,10 @@ public class InterfaceProgram extends Person {
 			
 			//Object o = new Object();
 			//Person p = (Person)o;
-			
-			Person p1 = new Student("Archana", "Maran", "female", "address", "0987");
-			Person p2 = new Student("Archana", "Maran", "female", "address", "0987");
+	AddressForPerson ad = new AddressForPerson(955, "escalon ave", "sunnyvale", "ca", 95087);
+	
+			Person p1 = new Student("Archana", "Maran", "female", ad, "0987");
+			Person p2 = new Student("Archana", "Maran", "female", ad, "0987");
 			
 			if (p1.equals(p2)) {
 				System.out.println("They are same");

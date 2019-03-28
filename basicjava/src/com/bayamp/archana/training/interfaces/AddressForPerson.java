@@ -1,13 +1,13 @@
 package com.bayamp.archana.training.interfaces;
 
 public class AddressForPerson {
-	private String unitNo;  
+	private int unitNo;  
 	private String streetName;
 	private String city;
 	private String state;
-	private String zipcode; 
+	private int zipcode; 
 
-	AddressForPerson(String unitNo, String street, String city, String State, String zipcode) {
+	AddressForPerson(int unitNo, String street, String city, String State, int zipcode) {
 		this.city = city;
 		this.state = State;
 		this.streetName = street;
