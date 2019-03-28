@@ -12,7 +12,6 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.testng.annotations.DataProvider;
 
-import com.bayamp.sonia.training.annotation.DataFile;
 import com.bayamp.sonia.training.annotation.File;
 
 public class DataProviderUtility {
