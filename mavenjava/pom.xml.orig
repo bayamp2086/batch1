@@ -4,13 +4,20 @@
   <artifactId>mavenjava</artifactId>
   <version>1.0.0</version>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.testng/testng -->
    <dependency>
 =======
+
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependencies>
+>>>>>>> 105e5abd90602189375851056be912f482988cfc
+=======
   
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+>>>>>>> develop
 <dependency>
 >>>>>>> develop
     <groupId>org.testng</groupId>
@@ -21,6 +28,11 @@
   </dependency> 
 =======
 </dependency>
+<<<<<<< HEAD
+</dependencies>
+
+</project>
+=======
 
 <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
 <dependency>
@@ -34,3 +46,4 @@
 >>>>>>> develop
   </dependencies>
 </project>
+>>>>>>> develop
