@@ -1,4 +1,4 @@
-package com.bayamp.chaya.training.collections;
+package com.bayamp.chaya.training.constructorandinheritence;
 
 public class Laptop {
 	private String laptopName;

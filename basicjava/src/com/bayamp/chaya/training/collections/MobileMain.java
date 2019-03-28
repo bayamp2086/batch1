@@ -1,10 +1,10 @@
-package com.bayamp.chaya.training.driver;
+package com.bayamp.chaya.training.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.bayamp.chaya.training.collections.Mobile;
+import com.bayamp.chaya.training.constructorandinheritence.Mobile;
 
 public class MobileMain {
 

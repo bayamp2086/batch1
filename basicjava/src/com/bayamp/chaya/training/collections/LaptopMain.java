@@ -1,11 +1,11 @@
-package com.bayamp.chaya.training.driver;
+package com.bayamp.chaya.training.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import com.bayamp.chaya.training.collections.Laptop;
+import com.bayamp.chaya.training.constructorandinheritence.Laptop;
 
 public class LaptopMain {
 

@@ -1,4 +1,4 @@
-package com.bayamp.chaya.training.collections;
+package com.bayamp.chaya.training.constructorandinheritence;
 
 public class Mobile implements Comparable<Mobile> {
 	private String mobileName;

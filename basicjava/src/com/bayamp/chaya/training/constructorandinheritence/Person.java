@@ -1,6 +1,6 @@
 package com.bayamp.chaya.training.constructorandinheritence;
-
-public abstract class Person {
+//public abstract class Person { 
+public  class Person {
 	protected String fName;
 	protected String lName;
 	protected Address2 address;
