@@ -1,0 +1,24 @@
+TESTVALUES,EXPECTED,SCENARIO,RESULTS,TESTCASE
+Archu19@,true,Check if correct format is given its accepting in the password and not throwing exception,PASS,Checked if correct format is given its accepting in the password and not throwing exception
+Archu19@,true,Check if the password starts with one capital and the rest with small letters,PASS,Checked if the password starts with one capital and the rest with small letters
+archu19@,[false],Check if the password does not start with small letters and then cap letter,PASS,Checked if the password does not start with small letters and then cap letter
+ArChu19@,true,Check if the password does not have more than one cap letter,PASS,Checked if the password does not have more than one cap letter
+Archanaa@,true,Check if the password does not accepts Alphabets only,PASS,Checked if the password does not accepts Alphabets only
+12345678@,true,Check if the password does not accepts numerics only,PASS,Checked if the password does not accepts numerics only
+@@#@#@,true,Check if the password does not accepts charac only,PASS,Checked if the password does not accepts charac only
+Archu19@$,true,Check if the password contains one special charc,PASS,Checked if the password contains one special charc
+Ar19@,true,Check if the password length is 6 top 8 ( min 5 ),PASS,Checked if the password length is 6 top 8 ( min 5 )
+Arc19@,true,Check if the password length is 6 top 8 ( min 6 ),PASS,Checked if the password length is 6 top 8 ( min 6 )
+Arch19@,true,Check if the password length is 6 top 8 ( min 7 ),PASS,Checked if the password length is 6 top 8 ( min 7 )
+Archu19@,true,Check if the password length is 6 top 8 ( max 8 ),PASS,Checked if the password length is 6 top 8 ( max 8 )
+Archu819@,true,Check if the password length is 6 top 8 ( max 9 ),PASS,Checked if the password length is 6 top 8 ( max 9 )
+Archu@19,true,Check if the password does not accepts spl charc in the middle,PASS,Checked if the password does not accepts spl charc in the middle
+Archu19!,true,Check if the password ends with spl charc of !,PASS,Checked if the password ends with spl charc of !
+Archu19@,true,Check if the password ends with spl charc of @,PASS,Checked if the password ends with spl charc of @
+Archu19$,true,Check if the password ends with spl charc of $,PASS,Checked if the password ends with spl charc of $
+Archu19%,true,Check if the password ends with spl charc of %,PASS,Checked if the password ends with spl charc of %
+Archu19#,true,Check if the password ends with spl charc of #,PASS,Checked if the password ends with spl charc of #
+Archu19&,true,Check if the password ends with other spl charc that is not from the list,PASS,Checked if the password ends with spl charc of &
+Arch 19@,true,Check if the password does not accepts space in the middle,PASS,Check if the password does not accepts space in the middle
+rchu19#,true,Check if the password does not accepts space in the first,PASS,Checked if the password does not accepts space in the first
+Arch19#,true,Check if the password does not accepts space in the last,PASS,Checked if the password does not accepts space in the last
