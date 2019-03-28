@@ -53,7 +53,7 @@ public class NewMapExample  {
 		Map<String, Integer> treeMapScore = new TreeMap<String, Integer>(new Comparator<String>() {
 
 			@Override
-			public int compare(Object o1, Object o2) {
+			public int compare(String o1, String o2) {
 				// TODO Auto-generated method stub
 				return o2.compareTo(o1);
 			}
