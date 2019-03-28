@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class MapTest {
 	
 	
-	@Test
+	/*@Test
 	public void countryPositiveTest() {
 		String expected = "Delhi";
 		String actual = MapUtils.Capital("India") ;
@@ -31,7 +31,7 @@ public class MapTest {
 
 		Assert.assertEquals(actual, expected);
 	}
-
+*/
 
 	// what is dev did a mistake and he is returning some value insetad of throwing some exception 013 and 203 and the next pic
 	

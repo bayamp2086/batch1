@@ -22,7 +22,7 @@ public class MapUtils {
 		countryAndCapitals.put("France", "Paris");
 	}
 	// to return capital of the given coutry 
-	public static String Capital(String country) {
+	/*public static String Capital(String country) {
 		return countryAndCapitals.get(country);
 	}
 
@@ -135,6 +135,6 @@ public class MapUtils {
 	  
 	//to convert the hash set to tree set 
 	//pic last 525
-	  
+	  */
 	}
 
