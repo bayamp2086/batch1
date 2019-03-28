@@ -13,6 +13,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.testng.annotations.DataProvider;
 
 import com.bayamp.sonia.training.annotation.DataFile;
+import com.bayamp.sonia.training.annotation.File;
 
 public class DataProviderUtility {
 
@@ -63,7 +64,7 @@ public class DataProviderUtility {
 	
 	public static String getFileNamefromAnnotation(Method method) {
 		
-		DataFile dataAnnotation = method.getAnnotation(DataFile.class);
+		File dataAnnotation = method.getAnnotation(File.class);
 		String fileName = dataAnnotation.file();
 		return fileName;
 	}
@@ -97,7 +98,48 @@ public class DataProviderUtility {
 		}
 		return outArr;
 		
+	}	
 		
+		@DataProvider(name="getDataforPassword")
+		private static Object[][] getDatafromCSVforPasswordMatching(Method method) throws IOException{
+			
+			String fileName=getFileNamefromAnnotation(method);
+			List<CSVRecord> csvRows=getCSVParser(fileName);
+			
+			CSVRecord header=csvRows.get(0);
+			Object outArr[][] = new Object[csvRows.size()-1][1];
+			int counter=0;
+			for(int i=1;i<csvRows.size();i++) {
+				
+				CSVRecord value=csvRows.get(i);
+				Map<String,String> passwordMap=new HashMap<String,String>();
+				passwordMap.put(header.get(0), value.get(0));
+				passwordMap.put(header.get(1), value.get(1));
+				outArr[counter][0]=passwordMap;
+				counter++;
+			}
+			return outArr;
+			
+	}
+		
+
+		@DataProvider(name="checkPasswordLength")
+		private static Object[][] getDatafromCSVforPasswordLength(Method method) throws IOException{
+			
+			String fileName=getFileNamefromAnnotation(method);
+			List<CSVRecord> csvRows=getCSVParser(fileName);
+			
+			CSVRecord header=csvRows.get(0);
+			Object outArr[][] = new Object[csvRows.size()-1][1];
+			int counter=0;
+			for(int i=1;i<csvRows.size();i++) {
+				
+				CSVRecord value=csvRows.get(i);
+				outArr[counter][0]=value.get(0);
+				counter++;
+			}
+			return outArr;
+			
 	}
 
 }

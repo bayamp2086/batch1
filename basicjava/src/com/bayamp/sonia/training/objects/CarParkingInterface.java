@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface CarParkingInterface {
 	
-	
+	public int totalParking();
 	public void park(Car c);
 	public int countParkedCar() ;
 	public int countRemainingParking();
