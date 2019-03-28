@@ -3,23 +3,27 @@
   <groupId>com.bayamp.mavenjava</groupId>
   <artifactId>mavenjava</artifactId>
   <version>1.0.0</version>
-<<<<<<< HEAD
-  <dependencies>
-  <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-   <dependency>
-=======
-  
+<build>
+
+<plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+ </plugins>
+   </build>       
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
->>>>>>> develop
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>6.14.3</version>
     <scope>test</scope>
-<<<<<<< HEAD
-  </dependency> 
-=======
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
@@ -28,9 +32,5 @@
     <artifactId>commons-csv</artifactId>
     <version>1.6</version>
 </dependency>
-
-
- 
->>>>>>> develop
   </dependencies>
 </project>
