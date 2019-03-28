@@ -1,4 +1,4 @@
-package com.bayamp.hellopackage;
+package com.bayamp.archana.training.testng;
 
 import java.io.IOException;
 import org.testng.Assert;

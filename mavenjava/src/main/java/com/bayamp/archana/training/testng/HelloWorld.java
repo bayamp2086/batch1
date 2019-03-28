@@ -1,4 +1,4 @@
-package com.bayamp.hellopackage;
+package com.bayamp.archana.training.testng;
 
 public class HelloWorld {
 

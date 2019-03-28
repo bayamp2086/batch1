@@ -1,7 +1,7 @@
 TESTVALUES,EXPECTED,SCENARIO,RESULTS,TESTCASE
 Archu19@,true,Check if correct format is given its accepting in the password and not throwing exception,PASS,Checked if correct format is given its accepting in the password and not throwing exception
 Archu19@,true,Check if the password starts with one capital and the rest with small letters,PASS,Checked if the password starts with one capital and the rest with small letters
-archu19@,[false],Check if the password does not start with small letters and then cap letter,PASS,Checked if the password does not start with small letters and then cap letter
+archu19@,false,Check if the password does not start with small letters and then cap letter,PASS,Checked if the password does not start with small letters and then cap letter
 ArChu19@,true,Check if the password does not have more than one cap letter,PASS,Checked if the password does not have more than one cap letter
 Archanaa@,true,Check if the password does not accepts Alphabets only,PASS,Checked if the password does not accepts Alphabets only
 12345678@,true,Check if the password does not accepts numerics only,PASS,Checked if the password does not accepts numerics only
