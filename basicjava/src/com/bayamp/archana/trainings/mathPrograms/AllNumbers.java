@@ -2,19 +2,12 @@ package com.bayamp.archana.trainings.mathPrograms;
 
 import java.util.Arrays;
 
-import com.bayamp.archana.training.utils.FibonacciSeries;
-import com.bayamp.archana.training.utils.IterativeFactorial;
-import com.bayamp.archana.training.utils.RecursiveFactorial;
-import com.bayamp.archana.training.utils.SwapUtil;
 
 public class AllNumbers {
 
 	public static void main(String[] args) {
 		int[] num = { -1, 9, 0, -1, 4, 6, 5 };
 		System.out.println(printSecondSmallest(num));
-
-		SwapUtil Sno = new SwapUtil();
-		Sno.swap(5, 10);
 
 		IterativeFactorial f = new IterativeFactorial();
 		int fa = f.fact(5);
