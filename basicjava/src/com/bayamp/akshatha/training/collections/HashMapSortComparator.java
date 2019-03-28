@@ -2,6 +2,7 @@ package com.bayamp.akshatha.training.collections;
 
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -9,11 +10,18 @@ import java.util.Map;
 public class HashMapSortComparator {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Map<String,Integer> countryOlympicMedalCount=new HashMap();
+		countryOlympicMedalCount.put("India", 100);
+		countryOlympicMedalCount.put("USA", 10);
+		countryOlympicMedalCount.put("Australia", 50);
+		countryOlympicMedalCount.put("Combodia", 100);
+		countryOlympicMedalCount.put("China", 2);
+		countryOlympicMedalCount.put("Germany", 5);
+		System.out.println(sortByValue(countryOlympicMedalCount));
 
 	}
 	
-	private static Map<String, Integer> sortByValue(Map<String, Integer> unsortMap) {
+	private static List<Map.Entry<String, Integer>> sortByValue(Map<String, Integer> unsortMap) {
 
         // 1. Convert Map to List of Map
         List<Map.Entry<String, Integer>> list =
@@ -27,7 +35,7 @@ public class HashMapSortComparator {
                 return (o1.getValue()).compareTo(o2.getValue());
             }
         });
-		return unsortMap;
+		return list;
 
 }
 }

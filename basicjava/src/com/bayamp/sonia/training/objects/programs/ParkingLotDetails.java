@@ -3,6 +3,7 @@ package com.bayamp.sonia.training.objects.programs;
 import com.bayamp.sonia.training.objects.Car;
 import com.bayamp.sonia.training.objects.CarParkingInterface;
 import com.bayamp.sonia.training.objects.ParkingLot;
+import com.bayamp.sonia.training.utils.SystemPrintClass;
 
 public class ParkingLotDetails {
 
@@ -12,26 +13,43 @@ public class ParkingLotDetails {
 		Car c=new Car("Sonia","Honda");
 		Car c1=new Car("Harish","Tesla");
 		Car c2=new Car("Minu","Toyota");
-		Car c3=new Car("Adi","Hona");
+		Car c3=new Car("Adi","Honda");
 		
 		CarParkingInterface p=new ParkingLot();
 		p.park(c);
 		p.park(c1);
 		p.park(c2);
 		p.park(c3);
+		p.park(c3);
+		p.park(c3);
+		p.park(c3);
+		p.park(c3);
+		p.park(c3);
+		p.park(c3);
 		
-		System.out.println("Total Parked Car :"+p.countParkedCar());
-		System.out.println("Total Remaining Car Parking :" + p.countRemainingParking());
+		
+		//if parked more than 10 cars
+		//p.park(c3);
 		
 		
-		p.removePark(c);
+		SystemPrintClass.print("\nTotal Parking Slots:"+p.totalParking());
 		
-		System.out.println("********After Removing one Car******");
+		SystemPrintClass.print("Parked Cars Details:"+p.carList());
+		SystemPrintClass.print("Total Parked Car :"+p.countParkedCar());
+		SystemPrintClass.print("Remaining Car Parking Slots:" + p.countRemainingParking());
 		
-		System.out.println("Total Parked Car :"+p.countParkedCar());
-		System.out.println("Total Remaining Car Parking :" + p.countRemainingParking());
 		
-		System.out.println("Total Parked Car :"+p.carList());
+		p.removePark(c3);
+		
+		SystemPrintClass.print("Removed Car Details :"+c3);
+		
+		SystemPrintClass.print("********After Removing one Car******");
+		
+		SystemPrintClass.print("Parked Cars Details:"+p.carList());
+		SystemPrintClass.print("Total Parked Car :"+p.countParkedCar());
+		SystemPrintClass.print("Remaining Car Parking :" + p.countRemainingParking());
+		
+		
 		
 	}
 

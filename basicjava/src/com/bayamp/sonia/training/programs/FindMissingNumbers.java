@@ -7,7 +7,7 @@ public class FindMissingNumbers {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int inputArr[] = { 4, 6, 7, 8 };
+		int inputArr[] = { 4,8 };
 		
 		int inputArr1[]={1,2,4,5,6 };
 

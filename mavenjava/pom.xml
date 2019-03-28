@@ -3,15 +3,36 @@
   <groupId>com.bayamp.mavenjava</groupId>
   <artifactId>mavenjava</artifactId>
   <version>1.0.0</version>
+<<<<<<< HEAD
 
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependencies>
+=======
+  
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+>>>>>>> develop
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>6.14.3</version>
     <scope>test</scope>
 </dependency>
+<<<<<<< HEAD
 </dependencies>
 
 </project>
+=======
+
+<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-csv</artifactId>
+    <version>1.6</version>
+</dependency>
+
+
+ 
+  </dependencies>
+</project>
+>>>>>>> develop

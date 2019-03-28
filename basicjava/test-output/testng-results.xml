@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="120" started-at="2019-03-26T21:40:35Z" finished-at="2019-03-26T21:40:35Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="120" started-at="2019-03-26T21:40:35Z" finished-at="2019-03-26T21:40:35Z">
+      <class name="com.bayamp.chaya.training.testng.PasswordRegexTestNG">
+        <test-method status="PASS" signature="positivePasswordValidation(java.lang.String, boolean)[pri:0, instance:com.bayamp.chaya.training.testng.PasswordRegexTestNG@3a82f6ef]" name="positivePasswordValidation" duration-ms="20" started-at="2019-03-26T21:40:35Z" data-provider="positivePasswordCheck" finished-at="2019-03-26T21:40:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aqa11w$]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positivePasswordValidation -->
+        <test-method status="PASS" signature="positivePasswordValidation(java.lang.String, boolean)[pri:0, instance:com.bayamp.chaya.training.testng.PasswordRegexTestNG@3a82f6ef]" name="positivePasswordValidation" duration-ms="2" started-at="2019-03-26T21:40:35Z" data-provider="positivePasswordCheck" finished-at="2019-03-26T21:40:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B1wab12#]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positivePasswordValidation -->
+        <test-method status="PASS" signature="positivePasswordValidation(java.lang.String, boolean)[pri:0, instance:com.bayamp.chaya.training.testng.PasswordRegexTestNG@3a82f6ef]" name="positivePasswordValidation" duration-ms="1" started-at="2019-03-26T21:40:35Z" data-provider="positivePasswordCheck" finished-at="2019-03-26T21:40:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Zqa11!]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positivePasswordValidation -->
+        <test-method status="PASS" signature="positivePasswordValidation(java.lang.String, boolean)[pri:0, instance:com.bayamp.chaya.training.testng.PasswordRegexTestNG@3a82f6ef]" name="positivePasswordValidation" duration-ms="2" started-at="2019-03-26T21:40:35Z" data-provider="positivePasswordCheck" finished-at="2019-03-26T21:40:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aq1111w@]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positivePasswordValidation -->
+        <test-method status="PASS" signature="positivePasswordValidation(java.lang.String, boolean)[pri:0, instance:com.bayamp.chaya.training.testng.PasswordRegexTestNG@3a82f6ef]" name="positivePasswordValidation" duration-ms="1" started-at="2019-03-26T21:40:35Z" data-provider="positivePasswordCheck" finished-at="2019-03-26T21:40:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aaa11w%]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positivePasswordValidation -->
+        <test-method status="PASS" signature="negativePasswordValidation(java.lang.String, boolean)[pri:1, instance:com.bayamp.chaya.training.testng.PasswordRegexTestNG@3a82f6ef]" name="negativePasswordValidation" duration-ms="1" started-at="2019-03-26T21:40:35Z" data-provider="negativePasswordCheck" finished-at="2019-03-26T21:40:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AAqa11w$]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativePasswordValidation -->
+        <test-method status="PASS" signature="negativePasswordValidation(java.lang.String, boolean)[pri:1, instance:com.bayamp.chaya.training.testng.PasswordRegexTestNG@3a82f6ef]" name="negativePasswordValidation" duration-ms="2" started-at="2019-03-26T21:40:35Z" data-provider="negativePasswordCheck" finished-at="2019-03-26T21:40:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B1wab12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativePasswordValidation -->
+        <test-method status="PASS" signature="negativePasswordValidation(java.lang.String, boolean)[pri:1, instance:com.bayamp.chaya.training.testng.PasswordRegexTestNG@3a82f6ef]" name="negativePasswordValidation" duration-ms="1" started-at="2019-03-26T21:40:35Z" data-provider="negativePasswordCheck" finished-at="2019-03-26T21:40:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Z$qa1a1!]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativePasswordValidation -->
+        <test-method status="PASS" signature="negativePasswordValidation(java.lang.String, boolean)[pri:1, instance:com.bayamp.chaya.training.testng.PasswordRegexTestNG@3a82f6ef]" name="negativePasswordValidation" duration-ms="1" started-at="2019-03-26T21:40:35Z" data-provider="negativePasswordCheck" finished-at="2019-03-26T21:40:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1q1111wee@]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativePasswordValidation -->
+        <test-method status="PASS" signature="negativePasswordValidation(java.lang.String, boolean)[pri:1, instance:com.bayamp.chaya.training.testng.PasswordRegexTestNG@3a82f6ef]" name="negativePasswordValidation" duration-ms="1" started-at="2019-03-26T21:40:35Z" data-provider="negativePasswordCheck" finished-at="2019-03-26T21:40:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[aa11w%@]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativePasswordValidation -->
+      </class> <!-- com.bayamp.chaya.training.testng.PasswordRegexTestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

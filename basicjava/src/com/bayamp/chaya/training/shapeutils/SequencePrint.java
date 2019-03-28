@@ -1,4 +1,4 @@
-package com.bayamp.chaya.training.math.util;
+package com.bayamp.chaya.training.shapeutils;
 
 public class SequencePrint {
 
