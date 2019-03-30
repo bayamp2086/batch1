@@ -17,6 +17,19 @@
 				</configuration>
 			</plugin>
 
+			<!-- <plugin>
+			
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.14.1</version>
+			<configuration>
+				Suite testng xml file to consider for test execution
+				<suiteXmlFiles>
+					<suiteXmlFile>./TestSuites/SmokeTestSuite.xml</suiteXmlFile>
+				</suiteXmlFiles>
+			</configuration>
+			</plugin> -->
+			
 			<plugin>
 			
 			<groupId>org.apache.maven.plugins</groupId>
@@ -25,7 +38,7 @@
 			<configuration>
 				<!-- Suite testng xml file to consider for test execution -->
 				<suiteXmlFiles>
-					<suiteXmlFile>./TestSuites/SmokeTestSuite.xml</suiteXmlFile>
+					<suiteXmlFile>${suite}</suiteXmlFile>
 				</suiteXmlFiles>
 			</configuration>
 			</plugin>
@@ -46,11 +59,5 @@
 			<version>1.6</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-csv</artifactId>
-			<version>1.6</version>
-		</dependency>
 	</dependencies>
 </project>
