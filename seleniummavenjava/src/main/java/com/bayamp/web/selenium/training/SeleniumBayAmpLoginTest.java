@@ -32,7 +32,7 @@ public class SeleniumBayAmpLoginTest {
 		
 		Thread.sleep(2000);
 		
-		driver.close();
+		//driver.close();
 		driver.quit();
 		
 		
