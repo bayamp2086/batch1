@@ -1,7 +1,5 @@
 package com.bayamp.web.selenium.training;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,7 +15,7 @@ public class BayampLogin {
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://webmail.bayamp.com");
 
-		driver.manage().window().fullscreen();
+		driver.manage().window().maximize();
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.cssSelector("#user")).sendKeys("user2@bayamp.com");
 		Thread.sleep(1000);
