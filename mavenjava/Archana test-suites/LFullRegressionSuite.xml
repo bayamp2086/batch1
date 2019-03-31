@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name = "RegressionSuite">
+ <suite-files>
+ 
+<suite-file  path = "LParameterizedP1TestSuite.xml"></suite-file>
+<suite-file  path = "LSmokeTestSuite.xml"></suite-file>
+
+   
+</suite-files>
+</suite>
