@@ -28,7 +28,7 @@ public class SeleniumHelloWorld {
 		
 		//driver.findElement(By.xpath(".//input[contains(@name,'q')]")).sendKeys("BayAmp Technologies");
 		
-		driver.findElement(By.cssSelector(".gsfi")).sendKeys("BayAmp Technologies");
+		driver.findElement(By.cssSelector(".gLFyf.gsfi")).sendKeys("BayAmp Technologies");
 		
 		Thread.sleep(5000);
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
