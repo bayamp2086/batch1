@@ -4,8 +4,8 @@ public class PasswordRegEx {
 
 	public static void main(String[] args) {
 		
-		String pattern = "(^[A-Z]{1}[a-z0-9]{4,6}(!|@|$|%|#){1})";
-		String myStr = "Abcde12!";
+		String pattern = "(^[A-Z][a-z]{4,6})";
+		String myStr = "Archu";
 		
 		System.out.println(myStr.matches(pattern));
 		

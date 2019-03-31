@@ -23,18 +23,6 @@ public class PasswordMatchingProgramTest {
 		Reporter.log(""+actual);
 	}
 	
-	@Test(description="matchPasswordPattern", dataProvider="checkPasswordLength",
-	dataProviderClass=com.bayamp.sonia.training.utils.DataProviderUtility.class)
-	@File(file="src/main/resources/passwordMatch.csv")
-	public void checkPasswordLength(String password) throws Exception {
-		
-		if(password.length()<6 || password.length()>8) {
-			throw new Exception("Password Length should be between 6 -8");
-		}else {
-			Assert.assertTrue(true);
-		}
-		Reporter.log(""+password);
-	}
 	
 	@Test(description="matchPasswordPattern1",dataProvider="getDataforPassword",
 	dataProviderClass=com.bayamp.sonia.training.utils.DataProviderUtility.class)

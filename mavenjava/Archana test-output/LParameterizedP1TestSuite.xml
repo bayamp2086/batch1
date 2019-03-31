@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "PassWordTestingMaterial"> 
+
+   <test name = "testngTest">
+   
+   <parameter name="env" value="QA"/>
+   <parameter name="UserName" value="Archu"/>
+     
+     <classes>
+     
+          <class name = "com.bayamp.archana.training.testng.UserNameTest" />
+          
+     </classes>
+
+   </test>
+
+</suite>
