@@ -24,19 +24,20 @@ public class SeleniumHelloWorld {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	/*	
 		WebElement searchField = driver.findElement(By.name("q"));
-		searchField.sendKeys("BayAmp Technologies");*/
+		searchField.sendKeys("BayAmp Technologies")
+		driver.findElement(By.xpath(".//input[contains(@name,'q')]")).sendKeys("BayAmp Technologies");
+		driver.findElement(By.name("q")).sendKeys("BayAmp Technologies");*/
 		
-		//driver.findElement(By.xpath(".//input[contains(@name,'q')]")).sendKeys("BayAmp Technologies");
+		driver.findElement(By.cssSelector(".gLFyf.gsfi")).sendKeys("BayAmp Technologies");
 		
-		driver.findElement(By.cssSelector(".gsfi")).sendKeys("BayAmp Technologies");
 		
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 		
 		Thread.sleep(2000);
 		
 		driver.close();
-		driver.quit();
+	//	driver.quit();
 		
 		
 	}

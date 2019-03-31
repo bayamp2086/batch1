@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AkshathaTestSuite" verbose="1" >
+  <test name="AksTests" >
+  <groups>
+         <run>
+            <include name = "validtest" />
+         </run>
+      </groups>
+    <classes>
+       <class name="com.bayamp.akshatha.training.testng.PasswordValidationTest1" />
+       <class name="com.bayamp.akshatha.training.testng.PasswordValidationTest2" />
+    </classes>
+  </test>
+ 
+</suite>
