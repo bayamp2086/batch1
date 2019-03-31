@@ -1,9 +1,9 @@
-package com.bayamp.akshatha.training.RegExp;
+package com.bayamp.akshatha.training.RegEx;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RegExpTest {
+public class RegExExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

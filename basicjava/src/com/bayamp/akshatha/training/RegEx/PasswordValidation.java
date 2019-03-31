@@ -1,4 +1,4 @@
-package com.bayamp.akshatha.training.vaildationtest;
+package com.bayamp.akshatha.training.RegEx;
 
 public class PasswordValidation {
 

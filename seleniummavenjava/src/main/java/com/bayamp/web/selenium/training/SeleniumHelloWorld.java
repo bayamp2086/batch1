@@ -31,13 +31,13 @@ public class SeleniumHelloWorld {
 		driver.findElement(By.cssSelector(".gLFyf.gsfi")).sendKeys("BayAmp Technologies");
 		
 		
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 		
 		Thread.sleep(2000);
 		
 		driver.close();
-		driver.quit();
+	//	driver.quit();
 		
 		
 	}

@@ -1,10 +1,13 @@
-package com.bayamp.akshatha.training.vaildationtest;
+package com.bayamp.akshatha.training.testng;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
+import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.bayamp.akshatha.training.RegEx.PasswordValidation;
 
 public class PasswordValidationTest1 {
 
@@ -22,20 +25,22 @@ public class PasswordValidationTest1 {
 		return data;
 	}
 
-	@Test(dataProvider = "validPasswordProvider")
+	@Test(dataProvider = "validPasswordProvider",groups = { "validtest" })
 	public void validPasswordTest(String[] password) {
 		for (String s : password) {
 			boolean match = PasswordValidation.validate1(s);
-			System.out.println(match);
+			System.out.println("Password : "+s+" : "+ match);
+			Reporter.log("Password : "+s+" : "+ match);
 			assertTrue(match, s + " should be valid");
 		}
 	}
 
-	@Test(dataProvider = "invalidPasswordProvider")
+	@Test(dataProvider = "invalidPasswordProvider",groups = { "invalidtest" })
 	public void invalidPasswordTest(String[] password) {
 		for (String s : password) {
 			boolean match = PasswordValidation.validate1(s);
-			System.out.println(match);
+			System.out.println("Password : "+s+" : "+ match);
+			Reporter.log("Password : "+s+" : "+ match);
 			assertFalse(match, s + " should be invalid");
 		}
 	}
