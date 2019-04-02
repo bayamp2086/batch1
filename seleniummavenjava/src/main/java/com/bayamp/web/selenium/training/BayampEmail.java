@@ -10,6 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 public class BayampEmail {
+	
+	private static final By ID_LOCATOR = By.id("user");
 
 		@Test
 		public void myFirstSeleniumTest() throws InterruptedException{
@@ -25,7 +27,7 @@ public class BayampEmail {
 		
 			//driver.findElement(By.xpath(".//input[contains(@name,'q')]")).sendKeys("BayAmp Technologies");
 			
-			driver.findElement(By.id("user")).sendKeys("user4@bayamp.com");
+			driver.findElement(ID_LOCATOR).sendKeys("user4@bayamp.com");
 			
 			Thread.sleep(1000);
 			driver.findElement(By.id("pass")).sendKeys("user4");
