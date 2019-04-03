@@ -4,6 +4,23 @@
 	<groupId>com.bayamp.seleniummavenjava</groupId>
 	<artifactId>seleniummavenjava</artifactId>
 	<version>1.0.0</version>
+	<build>
+		<plugins>
+				<plugin>
+			
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.14.1</version>
+			<configuration>
+				<!-- Suite testng xml file to consider for test execution -->
+				<suiteXmlFiles>
+					<suiteXmlFile>TestSuites/ChayaBayAmpLoginTest.xml</suiteXmlFile>
+				</suiteXmlFiles>
+			</configuration>
+			</plugin>
+			</plugins>
+			</build>
+	
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -19,6 +36,11 @@
 			<artifactId>java-client</artifactId>
 			<version>7.0.0</version>
 		</dependency>
+		  <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.5</version>
+        </dependency>
 
 
 
