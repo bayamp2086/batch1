@@ -8,27 +8,29 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-public class SeleniumBayAmpLoginTest {
+import com.bayamp.web.selenium.common.BaseTest;
+import com.bayamp.web.selenium.pageobjects.LoginPage;
+
+public class SeleniumBayAmpLoginTest extends BaseTest {
 	
 	
 	@Test
 	public void checkBayAmpLogin() throws InterruptedException{
 		
-		System.setProperty("webdriver.gecko.driver","src/main/resources/drivers/geco/geckodriver");
-		Thread.sleep(2000);
+		WebDriver driver=initDriver();
 		
-		WebDriver driver = new FirefoxDriver();
-		driver.get("http://webmail.bayamp.com");
+		String expectedEmailAccount = "user3@bayamp.com";
 		
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		LoginPage loginPage = new LoginPage(driver);
+		
+		String actualEmail=loginPage.login("user3@bayamp.com", "user3");
 		
 		driver.findElement(By.xpath(".//input[contains(@id,'user')]")).sendKeys("user3@bayamp.com");
 		
 		driver.findElement(By.xpath(".//input[contains(@id,'pass')]")).sendKeys("user3");
 		
 		Thread.sleep(1000);
-		driver.findElement(By.cssSelector(".button")).sendKeys(Keys.ENTER);
+		driver.findElement(By.cssSelector(".button")).click();
 		
 		Thread.sleep(2000);
 		

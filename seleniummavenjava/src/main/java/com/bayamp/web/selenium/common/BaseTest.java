@@ -34,15 +34,17 @@ public class BaseTest {
 		
 		String url = prop.getProperty("app.url");
 		String browserType = prop.getProperty("browserType");
+		String firefoxDriverPath=prop.getProperty("firefoxDriverPath");
+		String chromeDriverPath=prop.getProperty("chromeDriverPath");
 		
 		if("firefox".equals(browserType)) {
-			System.setProperty("webdriver.gecko.driver", "src/main/resources/drivers/geco/geckodriver");
+			System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
 			driver = new FirefoxDriver();
 		}else if("chrome".equals(browserType)){
-			System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chrome/chrome");
+			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			driver = new ChromeDriver();
 		} else {
-			System.setProperty("webdriver.gecko.driver", "src/main/resources/drivers/geco/geckodriver");
+			System.setProperty("webdriver.gecko.driver", firefoxDriverPath);
 			driver = new FirefoxDriver();
 		}
 
