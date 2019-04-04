@@ -88,6 +88,21 @@ public class SeleniumBayAmpLoginTest extends BaseTest {
 		
 	}
 	
+	/*
+	 * Check Login Page Link
+	 * */
+	@Test
+	public void checkLoginPageLinks() throws InterruptedException{
+		
+		WebDriver driver=initDriver();
+		int expectedLinks= 2;
+		BayAmpLoginPage loginPage = new BayAmpLoginPage(driver);
+		
+		int actualCount=loginPage.countAllHrefLinkonLoginPage();
+		Assert.assertEquals(actualCount, expectedLinks);
+		
+	}
+	
 	
 
 }
