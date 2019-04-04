@@ -1,0 +1,8 @@
+EMAIL,PASSWORD,EXPECTED,SCENARIOS,TESTCASE,RESULT,,,,
+user4@bayamp.com,user4,You have logged out.,Check if the message “You have logged out.” appears when logged out,Pass,,,,,
+,,"Log Into Your Account
+",Check if the following header is found in the login page,Pass,,,,,
+,,"Copyright© 2019 cPanel, Inc.",Check if the following image is found in the login path,Pass,,,,,
+,,"Forgot Password? link is available
+",Check if the following link is found in the login path,Pass,,,,,
+,,Not a Customer? Sign Up Now! link is available,Check if the following link is found in the login path,Pass,,,,,

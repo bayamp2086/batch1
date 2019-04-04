@@ -9,8 +9,7 @@ public class LoginPage {
 	private static final By PASSWORD_LOCATOR = By.cssSelector("#pass");
 	private static final By SIGNIN_LOCATOR = By.cssSelector(".button");
 	private static final By LOGOUT_LOCATOR = By.id("lblUserNameTxt");
-	
-	private WebDriver driver;
+	private static WebDriver driver;
 	
 	//All methods here
 

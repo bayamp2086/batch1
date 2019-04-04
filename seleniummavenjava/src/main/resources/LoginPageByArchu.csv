@@ -1,0 +1,8 @@
+EMAIL,PASSWORD,EXPECTED,SCENARIOS,TESTCASE,RESULT,,,,
+empty,empty,You must specify a username to log in.,check if the message “You must specify a username to log in.” appeared when email and password are empty and log in is clicked,,,,,,
+empty,user4,You must specify a username to log in.,check if the message “You must specify a username to log in.” appeared when email and password are empty and log in is clicked,,,,,,
+user2,empty,The login is invalid.,check if the message “The login is invalid.”appeared when invalid email without @ is given and password is empty and log in is clicked,,,,,,
+@@,empty,The submitted username is invalid.,check if the message “TThe submitted username is invalid.”appeared when invalid email only @ is given and password is empty and log in is clicked,,,,,,
+mkuma32@bsdasd.com,empty,no message,check if no message appeared when invalid email with @ and .com is given and password is empty and log in is clicked,,,,,,
+usdsa@saa,empty,no message,check if no message appeared when invalid email with @ and no .com is given and password is empty and log in is clicked,,,,,,
+user4@bayamp.com,user,no message,check if no message appeared when correct email and wrong password is given and log in is clicked,,,,,,

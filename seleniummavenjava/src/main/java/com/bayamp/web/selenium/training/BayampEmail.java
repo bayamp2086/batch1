@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
@@ -16,10 +16,11 @@ public class BayampEmail {
 		@Test
 		public void myFirstSeleniumTest() throws InterruptedException{
 			
-			System.setProperty("webdriver.gecko.driver","src/main/resources/drivers/geco/geckodriver");
+			//System.setProperty("webdriver.gecko.driver","src/main/resources/drivers/geco/geckodriver");
+			System.setProperty("webdriver.chrome.driver","/Users/mohanakarthikeyan/github-workspace/newbatch1/seleniummavenjava/src/main/resources/drivers/chromedriver/chromedriver2");
 			Thread.sleep(2000);
-			
-			WebDriver driver = new FirefoxDriver();
+			//WebDriver driver = new FirefoxDriver();
+			WebDriver driver = new ChromeDriver();
 			driver.get("http://webmail.bayamp.com/");
 			
 			driver.manage().window().maximize();
