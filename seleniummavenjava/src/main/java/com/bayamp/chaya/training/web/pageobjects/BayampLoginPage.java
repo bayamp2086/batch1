@@ -36,9 +36,10 @@ public class BayampLoginPage {
 		String loginStatusMessage = driver.findElement(LOGIN_STATUS_MESSAGE).getText();
 		return loginStatusMessage;
 	}
+
 	public String getInvalidPasswordStatusMessage() {
 		String invalidPAsswordStatusMessage = driver.findElement(LOGIN_STATUS_MESSAGE1).getText();
 		return invalidPAsswordStatusMessage;
 	}
-	
+
 }
