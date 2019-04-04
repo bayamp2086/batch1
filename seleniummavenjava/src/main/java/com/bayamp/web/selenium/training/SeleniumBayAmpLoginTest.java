@@ -23,7 +23,7 @@ public class SeleniumBayAmpLoginTest extends BaseTest {
 		
 		LoginPage loginPage = new LoginPage(driver);
 		
-		String actualEmail=loginPage.login("user3@bayamp.com", "user3");
+		//String actualEmail=loginPage.login("user3@bayamp.com", "user3");
 		
 		driver.findElement(By.xpath(".//input[contains(@id,'user')]")).sendKeys("user3@bayamp.com");
 		

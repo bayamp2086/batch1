@@ -5,6 +5,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.bayamp.web.selenium.common.BaseTest;
+import com.bayamp.web.selenium.common.Page;
+import com.bayamp.web.selenium.pageobjects.ErrorPage;
+import com.bayamp.web.selenium.pageobjects.HomePage;
 import com.bayamp.web.selenium.pageobjects.LoginPage;
 
 public class HarishLoginPageTest extends BaseTest {
@@ -15,8 +18,9 @@ public class HarishLoginPageTest extends BaseTest {
 		WebDriver driver = initDriver();
 		String expectedEmailAccount = "user2@bayamp.com";
 		LoginPage loginPage = new LoginPage(driver);
-		String emailAccount = loginPage.login("user2@bayamp.com","user2");
-		Assert.assertEquals(emailAccount,expectedEmailAccount);
+		Page page = loginPage.login("user2@bayamp.com","user2");
+
+		Assert.assertTrue(page instanceof HomePage);
 		
 	}
 	
@@ -24,20 +28,15 @@ public class HarishLoginPageTest extends BaseTest {
 	public void loginInvalidPasswordTest(){
 				
 		WebDriver driver = initDriver();
-		String expectedEmailAccount = "user2@bayamp.com";
+
 		LoginPage loginPage = new LoginPage(driver);
-		String emailAccount = loginPage.login("user2@bayamp.com","invalid");
+		Page page = loginPage.login("user2@bayamp.com","invalid");
 		
-	}
-	
-	@Test
-	public void loginInvalidUserIDTest(){
-				
-		WebDriver driver = initDriver();
-		String expectedEmailAccount = "xser22@bayamp.com";
-		LoginPage loginPage = new LoginPage(driver);
-		String emailAccount = loginPage.login("user2@bayamp.com","invalid");
+		Assert.assertTrue(page instanceof ErrorPage);
 		
+		ErrorPage errPage = (ErrorPage)page;
+		
+		String errorMessage = errPage.getText();
 		
 	}
 	
