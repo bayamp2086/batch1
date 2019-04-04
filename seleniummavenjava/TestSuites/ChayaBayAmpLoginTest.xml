@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ChayaBayampLoginTest" verbose="1" >
+  <test name="SmokeTests" >
+    <classes>
+       <class name="com.bayamp.chaya.training.web.testng.tests.BayampLoginTest" />
+    </classes>
+  </test>
+ 
+</suite>
