@@ -1,23 +1,34 @@
 package com.bayamp.training.sonia.web.selenium;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.bayamp.training.sonia.web.selenium.pageobject.BayAmpLoginPage;
 import com.bayamp.web.selenium.common.BaseTest;
+import com.bayamp.web.selenium.common.Page;
+import com.bayamp.web.selenium.pageobjects.ErrorPage;
+import com.bayamp.web.selenium.pageobjects.HomePage;
+import com.bayamp.web.selenium.pageobjects.LoginPage;
 
 public class SeleniumBayAmpLoginTest extends BaseTest {
-	
+	private static final By LOGOUT_LOCATOR = By.id("lblUserNameTxt");
+	private WebDriver driver;
 	
 	@Test
 	public void loginPositiveTest() throws InterruptedException{
 		
 		WebDriver driver=initDriver();
 		String expectedEmailAccount = "user3@bayamp.com";
-		BayAmpLoginPage loginPage = new BayAmpLoginPage(driver);
+		//BayAmpLoginPage loginPage = new BayAmpLoginPage(driver);
 		
-		String actualEmail=loginPage.login("user3@bayamp.com", "user3");
+		LoginPage loginPage = new LoginPage(driver);
+		
+		Page homePage = loginPage.login("user3@bayamp.com", "user3");
+		
+		String actualEmail = driver.findElement(LOGOUT_LOCATOR).getText();
+		
 		Assert.assertEquals(actualEmail, expectedEmailAccount);
 		
 	}
@@ -31,12 +42,12 @@ public class SeleniumBayAmpLoginTest extends BaseTest {
 	@Test
 	public void loginNegativeTest() throws InterruptedException{
 		
-		WebDriver driver=initDriver();
+		 driver=initDriver();
 		String expectedErrorMessage= "The login is invalid.";
-		BayAmpLoginPage loginPage = new BayAmpLoginPage(driver);
-		
-		String errorMsg=loginPage.incorredUserPasslogin("user3", "user3");
-		Assert.assertEquals(errorMsg, expectedErrorMessage);
+		LoginPage loginPage = new LoginPage(driver);
+	
+		Page errorPage =loginPage.login("user3", "user3");
+		Assert.assertTrue(errorPage instanceof ErrorPage);
 		
 	}
 	
