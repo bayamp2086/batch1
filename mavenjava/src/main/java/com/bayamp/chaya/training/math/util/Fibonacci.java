@@ -18,3 +18,15 @@ public class Fibonacci {
 	}
 
 }
+
+
+//other way
+/***
+public int fib(int n)
+n1=0,n2=1
+for(int i =1;i<n;i++){
+n2=n1+n2;
+n1=n2-n1;
+}
+return y;
+***/
