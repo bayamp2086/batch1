@@ -1,7 +1,5 @@
 package com.bayamp.chaya.training.web.testng.tests;
 
-import org.apache.http.entity.StringEntity;
-import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -49,6 +47,17 @@ public class RestAssuredBayampTest {
 		RequestSpecification request = RestAssured.given();
 		Response response = request.given().contentType(ContentType.JSON).accept(ContentType.JSON)
 				.body("{\"name\": \"Rahul1\"}").when().put(RestAssured.baseURI + "/update/41AtOUDFI");
+		int statusCode = response.getStatusCode();
+		System.out.println(statusCode);
+		Assert.assertEquals(statusCode, 200);
+
+	}
+
+	@Test
+	public void getResponseByDelete_deleteResponse() {
+		RestAssured.baseURI = "http://bayamprestapp.herokuapp.com/bayamp";
+		RequestSpecification request = RestAssured.given();
+		Response response = request.given().delete(RestAssured.baseURI + "/delete/41AtOUDFI");
 		int statusCode = response.getStatusCode();
 		System.out.println(statusCode);
 		Assert.assertEquals(statusCode, 200);
