@@ -16,22 +16,7 @@ public class BaseTest {
 
 	protected WebDriver initDriver() {
 		
-		String file = System.getProperty("config");
-		
-		if(file != null) {
-			propertyFile = "src/main/resources/"+file;
-		}
-		
-		Properties prop = new Properties();
-		InputStream input = null;
-
-		try {
-			input = new FileInputStream(propertyFile);
-			prop.load(input);
-		}catch (IOException ex) {
-			ex.printStackTrace();
-		}
-		
+		Properties prop=getProperty();
 		String url = prop.getProperty("app.url");
 		String browserType = prop.getProperty("browserType");
 		String firefoxDriverPath=prop.getProperty("firefoxDriverPath");
@@ -57,6 +42,28 @@ public class BaseTest {
 	protected void closeDriver() throws InterruptedException {
 		//driver.close();
 		driver.quit();
+	}
+	
+	public Properties getProperty() {
+		
+		String file = System.getProperty("config");
+		
+		if(file != null) {
+			propertyFile = "src/main/resources/"+file;
+		}
+		
+		Properties prop = new Properties();
+		InputStream input = null;
+
+		try {
+			input = new FileInputStream(propertyFile);
+			prop.load(input);
+		}catch (IOException ex) {
+			ex.printStackTrace();
+		}
+		
+		return prop;
+		
 	}
 
 }
