@@ -19,7 +19,7 @@ import com.bayamp.web.selenium.common.propertyFileForLogin;
 import com.bayamp.web.selenium.pageobjects.LoginPageUtilByArc;
 
 public class LoginTestByArchu {
-	public static final String resource_Path = "/Users/mohanakarthikeyan/github-workspace/newbatch1/seleniummavenjava/src/main/resources/LoginPageByArchu.csv";
+	public static final String resource_Path = "/Users/mohanakarthikeyan/github-workspace/newbatch1/seleniummavenjava/src/main/resources/LoginPage.csv";
 	@ Test 
 	public void positiveTest() {
 		String expectedLogoutImage = "Logout";

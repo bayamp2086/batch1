@@ -11,13 +11,9 @@ public class LoginPage extends Page {
 	private static final By USER_LOCATOR = By.cssSelector("#user");
 	private static final By PASSWORD_LOCATOR = By.cssSelector("#pass");
 	private static final By SIGNIN_LOCATOR = By.cssSelector(".button");
-<<<<<<< HEAD
 	private static final By LOGOUT_LOCATOR = By.id("lblUserNameTxt");
 	private static WebDriver driver;
-	
-=======
 
->>>>>>> release-12.1/Sonia-dev
 	//All methods here
 
 	public LoginPage(WebDriver driver) {
