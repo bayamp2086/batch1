@@ -27,7 +27,7 @@ public static void main(String[] args) {
 
      driver.findElement(By.linkText("SHOP NOW")).click();
      
-     List<WebElement> allPhoneElements = driver.findElements(By.xpath("//div[@class='title']/a"));
+     List<WebElement> allPhoneElements = driver.findElements(By.xpath("//div  vy'/a"));
      int appleCtr =0;
      int samsungCtr =0;
      int motoCtr =0;
@@ -39,14 +39,14 @@ public static void main(String[] args) {
     	System.out.println("Phone brand text "+ phoneBrand );
     	if (phoneBrand.contains("Apple")) appleCtr = appleCtr + 1; 
     	else if (phoneBrand.contains("Samsung"))  samsungCtr++;
-    	else if (phoneBrand.contains("moto"))motoCtr= motoCtr + 1;
-    	else if (phoneBrand.contains("zte"))zteCtr= zteCtr + 1;
-    	else otherMob++;
-    	
+    	else if (phoneBrand.contains("Moto"))motoCtr= motoCtr + 1;
+    	else if (phoneBrand.contains("ZTE"))zteCtr= zteCtr + 1;
+    	else otherMob++;	
      }
-   
-
-      System.out.println("Total apple "+ appleCtr);
+      System.out.println("Total Apple Phone: "+ appleCtr);
+      System.out.println("Total Samsung Phone:"+ samsungCtr);
+      System.out.println("Total moto phone "+ motoCtr);
+      System.out.println("Total zte phone "+ zteCtr); 
      }
 
 
