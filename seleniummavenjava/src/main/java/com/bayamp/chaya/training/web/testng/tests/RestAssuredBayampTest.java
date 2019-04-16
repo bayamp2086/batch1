@@ -34,7 +34,7 @@ public class RestAssuredBayampTest {
 		 * "application/json"); request.body(requestParams.toJSONString());
 		 */
 		Response response = request.given().contentType(ContentType.JSON).accept(ContentType.JSON)
-				.body("{\"name\": \"Rahul\"}").when().post(RestAssured.baseURI + "/create");
+				.body("{\"name\": \"Rahul234\"}").when().post(RestAssured.baseURI + "/create");
 
 		int statusCode = response.getStatusCode();
 		System.out.println(statusCode);
@@ -46,7 +46,7 @@ public class RestAssuredBayampTest {
 		RestAssured.baseURI = "http://bayamprestapp.herokuapp.com/bayamp";
 		RequestSpecification request = RestAssured.given();
 		Response response = request.given().contentType(ContentType.JSON).accept(ContentType.JSON)
-				.body("{\"name\": \"Rahul1\"}").when().put(RestAssured.baseURI + "/update/41AtOUDFI");
+				.body("{\"name\": \"Rahul1\"}").when().put(RestAssured.baseURI + "/update/4yesWdwFU");
 		int statusCode = response.getStatusCode();
 		System.out.println(statusCode);
 		Assert.assertEquals(statusCode, 200);
@@ -57,7 +57,7 @@ public class RestAssuredBayampTest {
 	public void getResponseByDelete_deleteResponse() {
 		RestAssured.baseURI = "http://bayamprestapp.herokuapp.com/bayamp";
 		RequestSpecification request = RestAssured.given();
-		Response response = request.given().delete(RestAssured.baseURI + "/delete/41AtOUDFI");
+		Response response = request.given().delete(RestAssured.baseURI + "/delete/4yesWdwFU");
 		int statusCode = response.getStatusCode();
 		System.out.println(statusCode);
 		Assert.assertEquals(statusCode, 200);

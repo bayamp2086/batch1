@@ -1,4 +1,4 @@
-package com.bayamp.chaya.training.driver;
+package com.bayamp.chaya.training.string.util;
 
 public class toLowercase {
 

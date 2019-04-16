@@ -24,8 +24,8 @@ public class CredoMobilePage {
 		Actions action = new Actions(driver);
 		action.moveToElement(driver.findElement(SHOP_NOW_LOCATOR)).build().perform();
 		Thread.sleep(5000);
-		action.moveToElement(driver.findElement(ALL_DEVICES_LOCATOR)).click().build().perform();
-		Thread.sleep(5000);
+		action.moveToElement(driver.findElement(ALL_DEVICES_LOCATOR)).click();
+		Thread.sleep(2000);
 		List<WebElement> appleDeviceList = driver.findElements(APPLE_DEVICES);
 		List<WebElement> samsungDeviceList = driver.findElements(SAMSUNG_DEVICES);
 		List<WebElement> motorolaDeviceList = driver.findElements(MOTOROLA_DEVICES);

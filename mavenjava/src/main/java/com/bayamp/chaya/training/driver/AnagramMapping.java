@@ -1,6 +1,8 @@
 package com.bayamp.chaya.training.driver;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class AnagramMapping {
@@ -16,11 +18,10 @@ public class AnagramMapping {
 
 	public static int[] anagramMappings(int[] A, int[] B) {
 		Map<Integer, Integer> lookup = new HashMap();
-
 		for (int i = 0; i < B.length; i++)
 			lookup.put(B[i], i);
-
 		int[] ans = new int[A.length];
+		
 		for (int j = 0; j < ans.length; j++) {
 			ans[j] = lookup.get(A[j]);
 		}

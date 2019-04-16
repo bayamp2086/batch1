@@ -6,7 +6,10 @@ public class StringReverse {
 
 	public static void main(String[] args) {
 
-		ReverseString.stringReverse("hello123");
+		String res = ReverseString.stringReverse("hello123");
+		System.out.println(res);
+		String res1 = ReverseString.recursiveStringReverse("hello123");
+		System.out.println(res1);
 	}
 
 }
