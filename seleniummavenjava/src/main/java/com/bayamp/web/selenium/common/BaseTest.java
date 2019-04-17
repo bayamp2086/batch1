@@ -39,7 +39,7 @@ public class BaseTest {
 			System.setProperty("webdriver.gecko.driver", "src/main/resources/drivers/geco/geckodriver");
 			driver = new FirefoxDriver();
 		}else if("chrome".equals(browserType)){
-			System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chrome/chrome");
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chrome/chromedriver");
 			driver = new ChromeDriver();
 		} else {
 			System.setProperty("webdriver.gecko.driver", "src/main/resources/drivers/geco/geckodriver");
@@ -50,11 +50,11 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		return driver;
 	}
-	
+	/*
 	@AfterMethod
 	protected void closeDriver() throws InterruptedException {
 		//driver.close();
 		driver.quit();
-	}
+	}*/
 
 }
