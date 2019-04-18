@@ -50,11 +50,11 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		return driver;
 	}
-	/*
+	
 	@AfterMethod
 	protected void closeDriver() throws InterruptedException {
 		//driver.close();
 		driver.quit();
-	}*/
+	}
 
 }

@@ -1,6 +1,7 @@
 package com.bayamp.chaya.training.web.testng.tests;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.bayamp.chaya.training.web.pageobjects.AmericanGaintPage;
@@ -11,7 +12,6 @@ public class AmericanGaintTest extends BaseTest {
 	public void productPriceValidation() throws InterruptedException {
 		WebDriver driver = initDriver();
 		AmericanGaintPage page = new AmericanGaintPage(driver);
-		page.isTotalValid();
+		Assert.assertTrue(page.isTotalValid());
 	}
-
 }

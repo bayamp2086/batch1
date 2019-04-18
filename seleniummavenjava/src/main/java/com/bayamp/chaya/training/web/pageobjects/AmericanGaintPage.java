@@ -14,16 +14,6 @@ public class AmericanGaintPage {
 	private static final By PRODUCT_SIZE = By.xpath("//a[@title='Select size: Medium']");
 	private static final By PRODUCT_QUANTITY_INCREASE_BUTTON = By.xpath("//button[contains(text(),'+')]");
 	private static final By ADD_CART_LOCATOR = By.xpath("//button[@title='Add to Bag']");
-	private static final By SUBTOTAL_VALUE_1 = By.xpath(
-			"//div[@class='reveal-overlay']//div[@id='addtocartconfirmation']//div[@id='ajaxRevealContent']//div[@class='mini-cart-totals']//div[contains(@class,'mini-cart-subtotals')]//span[contains(@class,'value')]");
-	private static final By CHECKOUT_LOCATOR = By.xpath("//a[@title='Go to Cart']");
-	private static final By TOTAL_VALUE = By.xpath("//div[contains(@class,'line-item-total-price-amount')]");
-	private static final By POPUP_HIDE = By.xpath("//div[@class='addshop-overlay active']");
-
-	public AmericanGaintPage(WebDriver driver) {
-		this.driver = driver;
-	}
-
 	public boolean isTotalValid() throws InterruptedException {
 		checkForPopUpAndHide();
 		driver.findElement(PRODUCT_LINK_LOCATOR).click();
@@ -40,8 +30,7 @@ public class AmericanGaintPage {
 		Thread.sleep(2000);
 		checkForPopUpAndHide();
 		String value1 = driver.findElement(SUBTOTAL_VALUE_1).getText();
-		String valuez = driver.findElement(SUBTOTAL_VALUE_1).getTagName();
-		System.out.println("Sub total value:" + value1 + "v2" + valuez);
+		System.out.println("Sub total value:" + value1);
 		Thread.sleep(2000);
 		driver.findElement(CHECKOUT_LOCATOR).click();
 		Thread.sleep(2000);
@@ -53,11 +42,21 @@ public class AmericanGaintPage {
 			return false;
 	}
 
+	private static final By SUBTOTAL_VALUE_1 = By.xpath(
+			"//div[@class='reveal-overlay']//div[@id='addtocartconfirmation']//div[@id='ajaxRevealContent']//div[@class='mini-cart-totals']//div[contains(@class,'mini-cart-subtotals')]//span[contains(@class,'value')]");
+	private static final By CHECKOUT_LOCATOR = By.xpath("//a[@title='Go to Cart']");
+	private static final By TOTAL_VALUE = By.xpath("//div[contains(@class,'line-item-total-price-amount')]");
+	private static final By POPUP_HIDE = By.xpath("//div[@class='addshop-overlay active']");
+
+	public AmericanGaintPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
 	public void checkForPopUpAndHide() {
 		try {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			WebElement element = driver.findElement(POPUP_HIDE);
-			js.executeScript("arguments[0].style.display='none'", element);
+			WebElement popUpElement = driver.findElement(POPUP_HIDE);
+			js.executeScript("arguments[0].style.display='none'", popUpElement);
 		} catch (NoSuchElementException e) {
 			System.out.println("Error while executing: " + e.getMessage());
 		}
