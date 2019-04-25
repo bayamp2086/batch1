@@ -1,6 +1,6 @@
 package com.bayamp.archana.training.arraytests;
 
-import com.bayamp.archana.trainings.mathPrograms.FindMaxAndMin;
+import com.bayamp.archana.training.mathPrograms.FindMaxAndMin;
 
 public class ArrayTests {
 

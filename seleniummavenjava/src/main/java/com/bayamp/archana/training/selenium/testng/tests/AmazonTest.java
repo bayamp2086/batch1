@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,7 +16,7 @@ public class AmazonTest {
 	@Test
 	public void amazonPurchase() {
 		System.setProperty("webdriver.gecko.driver", "src/main/resources/drivers/geco/geckodriver");
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new FirefoxDriver();		
 		driver.get("https://www.amazon.com");
 		driver.manage().window().maximize();
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("tv");
