@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class ArrayUtil {
 
+	public static int finalnumb = 1;
+
 	public int[] findSecondHighNumbAndIndex(int arr[]) {
 
 		int high = -1;
@@ -182,96 +184,180 @@ public class ArrayUtil {
 
 	public static int[] removeDuplicate(int[] inputArr) {
 		// TODO Auto-generated method stub
-		
+
 		int current = inputArr[0];
 		boolean found = false;
-		
-		int arr[]=new int[inputArr.length];
-		int k=0;
+
+		int arr[] = new int[inputArr.length];
+		int k = 0;
 
 		for (int i = 0; i < inputArr.length; i++) {
-		    if (current == inputArr[i] && !found) {
-		        found = true;
-		    } else if (current != inputArr[i]) {
-		        System.out.print(" " + current);
-		        arr[k]=current;
-		        current = inputArr[i];
-		        found = false;
-		        k++;
-		    }
+			if (current == inputArr[i] && !found) {
+				found = true;
+			} else if (current != inputArr[i]) {
+				System.out.print(" " + current);
+				arr[k] = current;
+				current = inputArr[i];
+				found = false;
+				k++;
+			}
 		}
-	
-		
+
 		return arr;
-		
+
 	}
-	
+
 	public static int[] removeDuplicatebyArray(int[] inputArr) {
 		// TODO Auto-generated method stub
-		
-		
-		int length=inputArr.length;
-		
-		for(int i=0;i<length;i++) {
-			
-			for(int j=i+1;j<length;j++) {
-				
-				if(inputArr[i]==inputArr[j]) {
-					
-					inputArr[j]=inputArr[length-1];
+
+		int length = inputArr.length;
+
+		for (int i = 0; i < length; i++) {
+
+			for (int j = i + 1; j < length; j++) {
+
+				if (inputArr[i] == inputArr[j]) {
+
+					inputArr[j] = inputArr[length - 1];
 					j--;
 					length--;
 				}
-				
+
 			}
 		}
-		SystemPrintClass.print(ArrayUtil.toString(inputArr));
-		
-		int[] newArray =Arrays.copyOf(inputArr, length);
+		// SystemPrintClass.print(ArrayUtil.toString(inputArr));
+
+		int[] newArray = Arrays.copyOf(inputArr, length);
 		return newArray;
 	}
-	
-	
-	
+
+	public static int[] removeDuplicatebyArrayandappendMain(int[] inputArr, int duplicatearr[]) {
+		// TODO Auto-generated method stub
+
+		int outArr[] = removeDuplicatebyArrayandappend(duplicatearr, duplicatearr);
+		duplicatearr = new int[inputArr.length];
+
+		int outArr1[] = removeDuplicatebyArrayandappend(outArr, duplicatearr);
+
+		SystemPrintClass.print("after copy method return2" + ArrayUtil.toString(duplicatearr));
+
+		int outArr2[] = mergeTwoArray(outArr1, duplicatearr);
+
+		return outArr2;
+	}
+
+	public static int[] removeDuplicatebyArrayandappend(int[] inputArr, int duplicatearr[]) {
+		// TODO Auto-generated method stub
+
+		int length = inputArr.length;
+		int k = 0;
+		for (int i = 0; i < length; i++) {
+			// System.out.println(inputArr[i]);
+			for (int j = i + 1; j < length; j++) {
+
+				if (inputArr[i] == inputArr[j]) {
+
+					duplicatearr[k] = inputArr[j];
+					inputArr[j] = inputArr[length - 1];
+
+					k++;
+					j--;
+					length--;
+
+				}
+
+			}
+		}
+		// SystemPrintClass.print(ArrayUtil.toString(inputArr));
+
+		int[] newArray = Arrays.copyOf(inputArr, length);
+		duplicatearr = Arrays.copyOf(duplicatearr, k);
+		SystemPrintClass.print("after copy" + ArrayUtil.toString(duplicatearr));
+
+		return newArray;
+	}
+
+	public static int[] appendzeroatEnd(int[] inputArr) {
+
+		int k[] = new int[inputArr.length];
+		int count = 0;
+
+		for (int i = 0; i < inputArr.length; i++) {
+
+			if (inputArr[i] != 0) {
+
+				k[count] = inputArr[i];
+				count++;
+			}
+
+		}
+
+		while (count < inputArr.length) {
+
+			k[count] = 0;
+			count++;
+		}
+		return k;
+	}
 
 	public static int[] mergeTwoArray(int[] inputArr1, int[] inputArr2) {
 		// TODO Auto-generated method stub
-		
-		int newArr[]=new int[inputArr1.length+inputArr2.length];
-		int k=0;
-		for(int element:inputArr1) {
-			newArr[k]=element;
+
+		int newArr[] = new int[inputArr1.length + inputArr2.length];
+		int k = 0;
+		for (int element : inputArr1) {
+			newArr[k] = element;
 			k++;
 		}
-		
-		for(int element:inputArr2) {
-			newArr[k]=element;
+
+		for (int element : inputArr2) {
+			newArr[k] = element;
 			k++;
 		}
 		return newArr;
 	}
-	
-	public static String toString(int []arr) {
-		
-		StringBuffer bf=new StringBuffer();
+
+	public static String toString(int[] arr) {
+
+		StringBuffer bf = new StringBuffer();
 		bf.append("[");
-		for(int element : arr) {
+		for (int element : arr) {
 			bf.append(element);
 			bf.append(",");
 		}
-		
+
 		bf.append("]");
-		
-		//bf.toString().replaceAll(",]","]");
-		
-		return bf.toString().replaceAll(",]","]");
+
+		// bf.toString().replaceAll(",]","]");
+
+		return bf.toString().replaceAll(",]", "]");
 	}
-	
-	public static Object[] arraysCopy(Object[] inputArr,int length) {
-		
-		Object outArr[]=Arrays.copyOf(inputArr, length);
+
+	public static Object[] arraysCopy(Object[] inputArr, int length) {
+
+		Object outArr[] = Arrays.copyOf(inputArr, length);
 		return outArr;
-		
+
+	}
+
+	public static int getpower(int number, int numpower) {
+		int finalnumb = 1;
+		for (int i = 0; i < numpower; i++) {
+			finalnumb = finalnumb * number;
+		}
+
+		return finalnumb;
+	}
+
+	public static int getpowerRecusrive(int num, int numberpower) {
+
+		if (numberpower > 1) {
+			finalnumb = num * finalnumb;
+			numberpower--;
+			getpowerRecusrive(finalnumb, numberpower);
+		}
+
+		return finalnumb;
 	}
 
 }

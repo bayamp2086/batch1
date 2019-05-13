@@ -1,5 +1,10 @@
 package com.bayamp.sonia.training.utils;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -258,6 +263,42 @@ public class CollectionsUtils {
 		outPutStr=outPutStr+first+counter;
 		return outPutStr;
 
+	}
+	
+	public static Map<String,String> getTypesMap(String input){
+		
+		Map<String,String>fruitMap=new HashMap<String,String>();
+		
+		try {
+			FileReader br=new FileReader(new File("resources/fruit.txt"));
+			BufferedReader bis=new BufferedReader(br);
+			String line;
+			while((line=bis.readLine())!=null) {
+				
+				String arr[]=line.split("-");
+				
+				if(arr!=null && arr.length==2) {
+					fruitMap.put(arr[0], arr[1]);
+				}
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return fruitMap;
+	}
+	
+	public static String getTypes(String input) {
+		
+		Map<String,String> fruitMap=getTypesMap(input);
+		return fruitMap.get(input);
 	}
 
 
