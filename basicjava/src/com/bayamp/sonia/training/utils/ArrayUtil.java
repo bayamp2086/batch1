@@ -1,6 +1,11 @@
 package com.bayamp.sonia.training.utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 
 public class ArrayUtil {
 
@@ -231,50 +236,27 @@ public class ArrayUtil {
 		return newArray;
 	}
 
-	public static int[] removeDuplicatebyArrayandappendMain(int[] inputArr, int duplicatearr[]) {
-		// TODO Auto-generated method stub
-
-		int outArr[] = removeDuplicatebyArrayandappend(duplicatearr, duplicatearr);
-		duplicatearr = new int[inputArr.length];
-
-		int outArr1[] = removeDuplicatebyArrayandappend(outArr, duplicatearr);
-
-		SystemPrintClass.print("after copy method return2" + ArrayUtil.toString(duplicatearr));
-
-		int outArr2[] = mergeTwoArray(outArr1, duplicatearr);
-
-		return outArr2;
-	}
-
-	public static int[] removeDuplicatebyArrayandappend(int[] inputArr, int duplicatearr[]) {
+	public static List<Integer> removeDuplicatebyArrayandappend(int[] inputArr) {
 		// TODO Auto-generated method stub
 
 		int length = inputArr.length;
-		int k = 0;
+
+		Set<Integer> duplicateSet = new LinkedHashSet<Integer>();
+		List<Integer> list = new ArrayList<Integer>();
+
 		for (int i = 0; i < length; i++) {
-			// System.out.println(inputArr[i]);
-			for (int j = i + 1; j < length; j++) {
+			if (list.contains(inputArr[i])) {
+				duplicateSet.add(inputArr[i]);
 
-				if (inputArr[i] == inputArr[j]) {
-
-					duplicatearr[k] = inputArr[j];
-					inputArr[j] = inputArr[length - 1];
-
-					k++;
-					j--;
-					length--;
-
-				}
-
+			} else {
+				list.add(inputArr[i]);
 			}
 		}
-		// SystemPrintClass.print(ArrayUtil.toString(inputArr));
 
-		int[] newArray = Arrays.copyOf(inputArr, length);
-		duplicatearr = Arrays.copyOf(duplicatearr, k);
-		SystemPrintClass.print("after copy" + ArrayUtil.toString(duplicatearr));
+		list.removeAll(duplicateSet);
 
-		return newArray;
+		list.addAll(duplicateSet);
+		return list;
 	}
 
 	public static int[] appendzeroatEnd(int[] inputArr) {
@@ -358,6 +340,51 @@ public class ArrayUtil {
 		}
 
 		return finalnumb;
+	}
+
+	public static int[] sortArray(int arr[]) {
+
+		for (int i = 0; i < arr.length - 1; i++) {
+
+			for (int j = 0; j < arr.length - 1 - i; j++) {
+
+				if (arr[j] > arr[j + 1]) {
+
+					int temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+				}
+			}
+		}
+
+		return arr;
+
+	}
+	
+	public static int[][] MergeOverLappingInterval(int arr[][]) {
+
+		int outputArr[][] = new int[3][2];
+
+		int l = 0;
+		for (int i = 0; i < arr.length - 1; i++) {
+			int k = 0;
+			for (int j = 0; j < arr[i].length - 1; j++) {
+
+				int first = arr[i][j];
+				int second = arr[i][j + 1];
+				int third = arr[i + 1][j];
+				int fourth = arr[i + 1][j + 1];
+				if (third > first && third < second) {
+					outputArr[l][k] = first;
+					outputArr[l][k+1] = fourth;
+				l++;
+				k++;
+				}
+			}
+		}
+
+		return outputArr;
+
 	}
 
 }
