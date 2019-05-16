@@ -15,7 +15,6 @@ public class ShapeUtil {
 			}
 			System.out.println();
 		}
-		
 	}
 	
 	/*public static void printDiamond1( int n) {

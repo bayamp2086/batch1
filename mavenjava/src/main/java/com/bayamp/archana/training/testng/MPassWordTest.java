@@ -16,7 +16,7 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
-public class MPassWordTest {	
+public class MPassWordTest	A {	
 
 	private static CSVParser passwdParser;
 

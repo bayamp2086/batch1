@@ -68,7 +68,7 @@ public class HTTPClientGet {
 		// httpEntity type is returned by  closableHttpresponse.getEntity()
 		// this Entity Utils .to string returnd a response json String.
 		
-		
+		//Entity reponseEntity = closableHttpresponse.getEntity();
 		String responseString = EntityUtils.toString(closableHttpresponse.getEntity());
 		System.out.println("Response String from Entity Utils:" + responseString);
 		//converting json string to json array 

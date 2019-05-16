@@ -1,8 +1,12 @@
 package com.bayamp.archana.training.mathPrograms;
 
 public class Fibonacci {
+	
+	public static void main(String[] args) {
+		Fibonacci.fibonacci(0);
+	}
 
-	public void fibonacci(int n) {
+	public static void fibonacci(int n) {
 		int n1 = 0;
 		int n2 = 1;
 		int n3;
