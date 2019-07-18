@@ -1,8 +1,15 @@
 package com.bayamp.sonia.training.utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 
 public class ArrayUtil {
+
+	public static int finalnumb = 1;
 
 	public int[] findSecondHighNumbAndIndex(int arr[]) {
 
@@ -182,96 +189,202 @@ public class ArrayUtil {
 
 	public static int[] removeDuplicate(int[] inputArr) {
 		// TODO Auto-generated method stub
-		
+
 		int current = inputArr[0];
 		boolean found = false;
-		
-		int arr[]=new int[inputArr.length];
-		int k=0;
+
+		int arr[] = new int[inputArr.length];
+		int k = 0;
 
 		for (int i = 0; i < inputArr.length; i++) {
-		    if (current == inputArr[i] && !found) {
-		        found = true;
-		    } else if (current != inputArr[i]) {
-		        System.out.print(" " + current);
-		        arr[k]=current;
-		        current = inputArr[i];
-		        found = false;
-		        k++;
-		    }
+			if (current == inputArr[i] && !found) {
+				found = true;
+			} else if (current != inputArr[i]) {
+				System.out.print(" " + current);
+				arr[k] = current;
+				current = inputArr[i];
+				found = false;
+				k++;
+			}
 		}
-	
-		
+
 		return arr;
-		
+
 	}
-	
+
 	public static int[] removeDuplicatebyArray(int[] inputArr) {
 		// TODO Auto-generated method stub
-		
-		
-		int length=inputArr.length;
-		
-		for(int i=0;i<length;i++) {
-			
-			for(int j=i+1;j<length;j++) {
-				
-				if(inputArr[i]==inputArr[j]) {
-					
-					inputArr[j]=inputArr[length-1];
+
+		int length = inputArr.length;
+
+		for (int i = 0; i < length; i++) {
+
+			for (int j = i + 1; j < length; j++) {
+
+				if (inputArr[i] == inputArr[j]) {
+
+					inputArr[j] = inputArr[length - 1];
 					j--;
 					length--;
 				}
-				
+
 			}
 		}
-		SystemPrintClass.print(ArrayUtil.toString(inputArr));
-		
-		int[] newArray =Arrays.copyOf(inputArr, length);
+		// SystemPrintClass.print(ArrayUtil.toString(inputArr));
+
+		int[] newArray = Arrays.copyOf(inputArr, length);
 		return newArray;
 	}
-	
-	
-	
+
+	public static List<Integer> removeDuplicatebyArrayandappend(int[] inputArr) {
+		// TODO Auto-generated method stub
+
+		int length = inputArr.length;
+
+		Set<Integer> duplicateSet = new LinkedHashSet<Integer>();
+		List<Integer> list = new ArrayList<Integer>();
+
+		for (int i = 0; i < length; i++) {
+			if (list.contains(inputArr[i])) {
+				duplicateSet.add(inputArr[i]);
+
+			} else {
+				list.add(inputArr[i]);
+			}
+		}
+
+		list.removeAll(duplicateSet);
+
+		list.addAll(duplicateSet);
+		return list;
+	}
+
+	public static int[] appendzeroatEnd(int[] inputArr) {
+
+		int k[] = new int[inputArr.length];
+		int count = 0;
+
+		for (int i = 0; i < inputArr.length; i++) {
+
+			if (inputArr[i] != 0) {
+
+				k[count] = inputArr[i];
+				count++;
+			}
+
+		}
+
+		while (count < inputArr.length) {
+
+			k[count] = 0;
+			count++;
+		}
+		return k;
+	}
 
 	public static int[] mergeTwoArray(int[] inputArr1, int[] inputArr2) {
 		// TODO Auto-generated method stub
-		
-		int newArr[]=new int[inputArr1.length+inputArr2.length];
-		int k=0;
-		for(int element:inputArr1) {
-			newArr[k]=element;
+
+		int newArr[] = new int[inputArr1.length + inputArr2.length];
+		int k = 0;
+		for (int element : inputArr1) {
+			newArr[k] = element;
 			k++;
 		}
-		
-		for(int element:inputArr2) {
-			newArr[k]=element;
+
+		for (int element : inputArr2) {
+			newArr[k] = element;
 			k++;
 		}
 		return newArr;
 	}
-	
-	public static String toString(int []arr) {
-		
-		StringBuffer bf=new StringBuffer();
+
+	public static String toString(int[] arr) {
+
+		StringBuffer bf = new StringBuffer();
 		bf.append("[");
-		for(int element : arr) {
+		for (int element : arr) {
 			bf.append(element);
 			bf.append(",");
 		}
-		
+
 		bf.append("]");
-		
-		//bf.toString().replaceAll(",]","]");
-		
-		return bf.toString().replaceAll(",]","]");
+
+		// bf.toString().replaceAll(",]","]");
+
+		return bf.toString().replaceAll(",]", "]");
+	}
+
+	public static Object[] arraysCopy(Object[] inputArr, int length) {
+
+		Object outArr[] = Arrays.copyOf(inputArr, length);
+		return outArr;
+
+	}
+
+	public static int getpower(int number, int numpower) {
+		int finalnumb = 1;
+		for (int i = 0; i < numpower; i++) {
+			finalnumb = finalnumb * number;
+		}
+
+		return finalnumb;
+	}
+
+	public static int getpowerRecusrive(int num, int numberpower) {
+
+		if (numberpower > 1) {
+			finalnumb = num * finalnumb;
+			numberpower--;
+			getpowerRecusrive(finalnumb, numberpower);
+		}
+
+		return finalnumb;
+	}
+
+	public static int[] sortArray(int arr[]) {
+
+		for (int i = 0; i < arr.length - 1; i++) {
+
+			for (int j = 0; j < arr.length - 1 - i; j++) {
+
+				if (arr[j] > arr[j + 1]) {
+
+					int temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+				}
+			}
+		}
+
+		return arr;
+
 	}
 	
-	public static Object[] arraysCopy(Object[] inputArr,int length) {
-		
-		Object outArr[]=Arrays.copyOf(inputArr, length);
-		return outArr;
-		
+	public static int[][] MergeOverLappingInterval(int arr[][]) {
+
+		int outputArr[][] = new int[3][2];
+
+		int l = 0;
+		for (int i = 0; i < arr.length - 1; i++) {
+			int k = 0;
+			for (int j = 0; j < arr[i].length - 1; j++) {
+
+				int first = arr[i][j];
+				int second = arr[i][j + 1];
+				int third = arr[i + 1][j];
+				int fourth = arr[i + 1][j + 1];
+				if (third > first && third < second) {
+					outputArr[l][k] = first;
+					outputArr[l][k+1] = fourth;
+				l++;
+				k++;
+				}
+			}
+		}
+
+		return outputArr;
+
 	}
 
 }

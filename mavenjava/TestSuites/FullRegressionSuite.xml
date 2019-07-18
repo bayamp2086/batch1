@@ -1,0 +1,5 @@
+<suites>
+<suite name = "P1TestSuite.xml" />
+<suite name = "SmokeTestSuite.xml" />
+
+</suites>

@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ChayaSmokeTestSuite" verbose="1" >
+  <test name="SmokeTests" >
+    <classes>
+       <class name="com.bayamp.chaya.training.testng.PasswordRegexTestNG" />
+    </classes>
+  </test>
+ 
+</suite>

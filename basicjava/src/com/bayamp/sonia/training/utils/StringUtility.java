@@ -63,6 +63,7 @@ public class StringUtility {
 			outputString = outputString + arr[i] + " ";
 
 		}
+		outputString = outputString.substring(0, outputString.length() - 1);
 		return outputString;
 
 	}
@@ -97,8 +98,9 @@ public class StringUtility {
 
 		char[] duplicate = new char[inputString.length()];
 		int k = 0;
-		for (int i = 0; i < inputString.length(); i++) {
 
+		while (inputString.length() > 0) {
+			int i = 0;
 			int count = findDuplicateChar(inputString, Character.toString((inputString.charAt(i))));
 			if (count > 1) {
 
@@ -106,6 +108,7 @@ public class StringUtility {
 				inputString = inputString.replaceAll(Character.toString(inputString.charAt(i)), "");
 				k++;
 			}
+			i++;
 		}
 		return duplicate;
 
@@ -119,7 +122,7 @@ public class StringUtility {
 
 		for (int i = 0; i < duplicateArr.length; i++) {
 
-			duplicateStrMsg = duplicateStrMsg + duplicateArr[i] + " ";
+			duplicateStrMsg = duplicateStrMsg + duplicateArr[i];
 		}
 
 		return duplicateStrMsg;
@@ -145,6 +148,132 @@ public class StringUtility {
 		}
 
 		return strlength;
+
+	}
+
+	public static boolean checkEmailpattern(String email) {
+		/*
+		 * ? at the most one 0 or 1 + atleast one \d digit \D non Digit [a-zA-Z] \w word
+		 * character[a-z][0-9] \\W non word character only special character \s white
+		 * space \t\r\n \S non white space \w \\w \d \D
+		 */
+
+		// email 6-8 - 3-4 numbers@bayamp.com
+		// harish-123@bayamp.com
+		// harish@bayamp.com
+		// ssn
+
+		String pattern = "\\w{6,8}\\-?\\d{0,3}@bayamp.com";
+		return email.matches(pattern);
+
+	}
+
+	public static boolean checkPasswordpattern(String pwd) {
+
+		// password pattern
+		// Alphanumeric and one special characters
+		// Length Min 6 max 8
+		// Always Starts with one Capital Letter and rest lower alphanumeric
+		// Ends with one special characters of this list{!@$%#}
+
+		// Sonia@
+
+		String pattern = "[A-Z][a-z 0-9]{4,6}[!@$%#]";
+		return pwd.matches(pattern);
+
+	}
+
+	public static boolean checkPasswordpattern1(String pwd) {
+
+		/*
+		 * Your password must have at least:
+		 * 
+		 * 8 characters 1 uppercase 1 numeric
+		 */
+
+		String pattern = "[A-Z a-z 0-9]{8,}";
+		return pwd.matches(pattern);
+
+	}
+
+	public static void displayWordbyLetter(String input) {
+
+		char strArr[] = input.toCharArray();
+		String finalStr = new String();
+		System.out.println("****** Display by Loop ******");
+		
+		for (int i = 0; i < strArr.length; i++) {
+
+			finalStr = finalStr + strArr[i];
+			System.out.println(finalStr);
+		}
+		finalStr = new String();
+		
+		System.out.println("****** Display by Loop in Reverse ******");
+		
+		for (int i = strArr.length - 1; i >= 0; i--) {
+
+			finalStr = finalStr + strArr[i];
+			System.out.println(finalStr);
+
+		}
+	}
+
+	public static void displayWordbyLetterBySubString(String input) {
+
+		int length = input.length();
+		String finalStr = new String();
+		int k = 1;
+		System.out.println("****** Display by Substring ******");
+		
+		while (length > 0) {
+
+			finalStr = input.substring(0, k);
+			System.out.println(finalStr);
+			length--;
+			k++;
+		}
+		length = input.length();
+		k = length;
+		finalStr = new String();
+		System.out.println("****** Display by Substring in Reverse ******");
+		while (length > 0) {
+
+			finalStr = finalStr + input.substring(k - 1, k);
+			System.out.println(finalStr);
+			length--;
+			k--;
+		}
+	}
+	
+public static void getStringPermutation(String inputStr) {
+		
+		for(int i=0;i<inputStr.length();i++) {
+			
+			for(int j=0;j<inputStr.length();j++) {
+				
+				String str=swapString(i,j,inputStr);
+				System.out.println(str);
+			}
+		}
+		
+	}
+	
+	public static String swapString(int c, int c1, String inputStr) {
+
+		char strChar[] = inputStr.toCharArray();
+
+		char temp = strChar[c];
+		strChar[c] = strChar[c1];
+		strChar[c1] = temp;
+
+		StringBuffer br = new StringBuffer();
+		for (int i = 0; i < strChar.length; i++) {
+
+			br.append(strChar[i]);
+		}
+
+		return br.toString();
 
 	}
 

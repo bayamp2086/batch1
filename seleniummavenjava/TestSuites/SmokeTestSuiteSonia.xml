@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SmokeTestSuiteSonia" verbose="1" >
+<test name="SmokeTest">
+<classes>
+<class name="com.bayamp.training.sonia.web.selenium.SeleniumBayAmpLoginTest"></class>
+</classes>
+</test>
+
+</suite>
